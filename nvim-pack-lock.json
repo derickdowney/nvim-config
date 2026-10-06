@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "fzf-lua": {
+      "rev": "bba13a0d260ca5e049683344ba70791c9ad8ece6",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "nvim-lspconfig": {
+      "rev": "a9bb4d5f4276aa5cddc015faa3ecc5a7b5a26b14",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "onedark.vim": {
+      "rev": "47bec7a6196a843dad195d2666c3ac84c6e80c78",
+      "src": "https://github.com/joshdick/onedark.vim"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    }
+  }
+}
