@@ -36,5 +36,5 @@ vim.opt.fillchars = {
 }
 
 -- All split windows share one single status line at bottom
-vim.opt.laststatus = 3
+-- vim.opt.laststatus = 3 -- lualine "globalstatus" overrides this
 

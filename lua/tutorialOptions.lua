@@ -22,6 +22,7 @@ vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
     -- :echo stdpath("data")
     -- :lua print(vim.fn.stdpath("data"))
 -- for me this is: /Users/derick/.local/share/nvim/undodir/
+-- on Windows it's: C:\Users\ddowney\AppData\Local\nvim-data
 vim.opt.undofile = true
 
 -- LEFT OFF ON 5 minutes and 55 seconds
