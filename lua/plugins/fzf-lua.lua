@@ -21,7 +21,9 @@ vim.keymap.set("n", "<leader>fk", function()
 end)
 
 vim.keymap.set("n", "<leader>fg", function()
-    fzf.grep_project()
+    fzf.grep_project({
+        search_paths = vim.fn.expand("%:p:h")
+    })
 end)
 
 vim.keymap.set("n", "<leader>fl", function()
