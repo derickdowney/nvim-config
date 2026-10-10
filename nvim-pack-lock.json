@@ -8,10 +8,6 @@
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
-    "nvim-cm": {
-      "rev": "a0a2bddb62b8e328141266724aa00df56640bffb",
-      "src": "https://bitbucket.org/hni-it/nvim-cm/src/main/"
-    },
     "nvim-lspconfig": {
       "rev": "33497f4930d40f28a465d38a763a00fc6902c658",
       "src": "https://github.com/neovim/nvim-lspconfig"
