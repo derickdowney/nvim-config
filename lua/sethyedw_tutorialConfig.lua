@@ -86,9 +86,14 @@ vim.keymap.set("n", "J", "mzJ`z", {
 })
 
 
--- Keep cursor centered when moving up/down in buffer
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
+-- Keep cursor centered when performing actions
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz", {
+--     desc = "Keep cursor centered when moving half-page down"
+-- })
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz", {
+--     desc = "Keep cursor centered when moving half-page up"
+-- })
+--
 
 -- LEFT OFF AT 10 minutes and 0 seconds!!!!
+-- 

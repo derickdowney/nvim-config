@@ -1,8 +1,8 @@
 -- Disable arrow keys 😭 in Normal and Insert modes
-vim.keymap.set({ "n", "i" }, "<Up>", "<Nop>")
-vim.keymap.set({ "n", "i" }, "<Down>", "<Nop>")
-vim.keymap.set({ "n", "i" }, "<Left>", "<Nop>")
-vim.keymap.set({ "n", "i" }, "<Right>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Left>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 
 -- Set "spacebar" as leader key
 vim.g.mapleader = " "
@@ -16,11 +16,23 @@ vim.keymap.set("n", "<leader>e", "<cmd>Explore<cr>")
 ----------------------------------------
 
 -- Allow <leader> to control windows
-vim.keymap.set("n", "<leader>wh", "<cmd>wincmd h<cr>")
-vim.keymap.set("n", "<leader>wj", "<cmd>wincmd j<cr>")
-vim.keymap.set("n", "<leader>wk", "<cmd>wincmd k<cr>")
-vim.keymap.set("n", "<leader>wl", "<cmd>wincmd l<cr>")
+vim.keymap.set("n", "<leader>wh", "<cmd>wincmd h<cr>", {
+    desc = "Go to the left window"
+})
+vim.keymap.set("n", "<leader>wj", "<cmd>wincmd j<cr>", {
+    desc = "Go to the down window"
+})
+vim.keymap.set("n", "<leader>wk", "<cmd>wincmd k<cr>", {
+    desc = "Go to the up window"
+})
+vim.keymap.set("n", "<leader>wl", "<cmd>wincmd l<cr>", {
+    desc = "Go to the right window"
+})
 
 -- Allow <leader> to control horizontal/vertical splits
-vim.keymap.set("n", "<leader>ws", "<cmd>split<cr>")
-vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>")
+vim.keymap.set("n", "<leader>ws", "<cmd>split<cr>", {
+    desc = "Split window"
+})
+vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>", {
+    desc = "Split window vertically"
+})
