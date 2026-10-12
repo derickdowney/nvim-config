@@ -10,13 +10,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
-badd +0 term://~//56303:/bin/bash
+badd +1 projects
+badd +1 worklogs
 argglobal
 %argdel
-set stal=2
-tabnew +setlocal\ bufhidden=wipe
-tabrewind
-edit projects
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -34,8 +31,10 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 34 + 24) / 48)
-exe '2resize ' . ((&lines * 10 + 24) / 48)
+exe '2resize ' . ((&lines * 11 + 24) / 48)
 argglobal
+edit projects
+Explore
 setlocal foldmethod=manual
 setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
@@ -44,21 +43,11 @@ setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 17) / 34)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
 lcd ~
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/worklogs", ":p")) | buffer ~/worklogs | else | edit ~/worklogs | endif
-if &buftype ==# 'terminal'
-  silent file ~/worklogs
-endif
+edit worklogs
+Explore
 setlocal foldmethod=manual
 setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
@@ -67,42 +56,12 @@ setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 5) / 10)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
 lcd ~
 wincmd w
 2wincmd w
 exe '1resize ' . ((&lines * 34 + 24) / 48)
-exe '2resize ' . ((&lines * 10 + 24) / 48)
-tabnext
-argglobal
-if bufexists(fnamemodify("term://~//56303:/bin/bash", ":p")) | buffer term://~//56303:/bin/bash | else | edit term://~//56303:/bin/bash | endif
-if &buftype ==# 'terminal'
-  silent file term://~//56303:/bin/bash
-endif
-setlocal foldmethod=manual
-setlocal foldexpr=0
-setlocal foldmarker={{{,}}}
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldenable
-let s:l = 1 - ((0 * winheight(0) + 22) / 45)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 014|
-lcd ~
+exe '2resize ' . ((&lines * 11 + 24) / 48)
 tabnext 1
-set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -117,6 +76,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
