@@ -44,7 +44,7 @@ require('lualine').setup {
     lualine_w = {'encoding', 'fileformat', 'filetype'},
     lualine_x = {'progress'},
     lualine_y = {'location'},
-    lualine_z = {{'datetime', style = "%H:%M"}},
+    lualine_z = {{'datetime', style = "%H:%M %Y-%m-%d"}},
   },
   inactive_sections = {
     lualine_a = {},
