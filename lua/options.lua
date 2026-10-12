@@ -7,6 +7,9 @@ vim.opt.relativenumber = true
 -- Show color line at column 80
 vim.opt.colorcolumn = "80"
 
+-- Highlight current line
+vim.opt.cursorline = true
+
 -- Use 4 spaces for indents, as is Python's standard
 vim.opt.tabstop = 4      -- Number of spaces that equals one <Tab>
 vim.opt.shiftwidth = 4   -- Size of an indent
