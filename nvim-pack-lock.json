@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "codediff.nvim": {
+      "rev": "09d9ebef2cc5a5c04db7a349cd6c61bdf84ecc8e",
+      "src": "https://github.com/esmuellert/codediff.nvim"
+    },
     "fzf-lua": {
       "rev": "bba13a0d260ca5e049683344ba70791c9ad8ece6",
       "src": "https://github.com/ibhagwan/fzf-lua"
