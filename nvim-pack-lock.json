@@ -8,6 +8,10 @@
       "rev": "bba13a0d260ca5e049683344ba70791c9ad8ece6",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
+    "gitsigns.nvim": {
+      "rev": "aa6cc2d7addb288cfd79a05ac257695d5ff61deb",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
     "lazygit.nvim": {
       "rev": "9ffc6103926718f7070fb4017694543cd7dc9718",
       "src": "https://github.com/kdheepak/lazygit.nvim"
