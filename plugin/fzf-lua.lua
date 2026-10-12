@@ -6,29 +6,41 @@ local fzf = require("fzf-lua")
 
 vim.keymap.set("n", "<leader>ff", function()
     fzf.files()
-end)
+end, {
+    desc = "Fuzzy search files"
+})
 
 vim.keymap.set("n", "<leader>fh", function()
     fzf.help_tags()
-end)
+end, {
+    desc = "Fuzzy search help tags"
+})
 
 vim.keymap.set("n", "<leader>fb", function()
     fzf.buffers()
-end)
+end, {
+    desc = "Fuzzy search buffers"
+})
 
 vim.keymap.set("n", "<leader>fk", function()
     fzf.builtin()
-end)
+end, {
+    desc = "Fuzzy search built-ins"
+})
 
 vim.keymap.set("n", "<leader>fg", function()
     fzf.grep_project({
         search_paths = vim.fn.expand("%:p:h")
     })
-end)
+end, {
+    desc = "Fuzzy search project grep"
+})
 
 vim.keymap.set("n", "<leader>fl", function()
     fzf.live_grep()
-end)
+end, {
+    desc = "Fuzzy search live grep"
+})
 
 
 

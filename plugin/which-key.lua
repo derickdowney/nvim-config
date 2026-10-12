@@ -3,7 +3,7 @@ vim.pack.add({
 })
 
 require("which-key").setup({
-    preset = "helix",
+    -- preset = "helix", -- Keeping standard since you can see full descriptions
     keys = {
         scroll_down = "<PageDown>",
         scroll_up = "<PageUp>",
