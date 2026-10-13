@@ -41,3 +41,20 @@ vim.opt.fillchars = {
 -- All split windows share one single status line at bottom
 -- vim.opt.laststatus = 3 -- lualine "globalstatus" overrides this
 
+
+----------------------------------------
+-- Options taken from "pookie's" tutorial
+-- https://www.youtube.com/watch?v=BBCScVuP3xo
+----------------------------------------
+vim.o.confirm = true -- raise dialog if unsaved buffer
+
+vim.diagnostic.config({
+    severity_sort = true,
+    update_in_insert = false, -- Only rerun LSP after you exit Insert mode
+    float = { source = 'if_many' }, -- "show multiple sources"
+    jump = { float = true }, -- When you ]d to next error, pop up error window
+})
+
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, {
+    desc = "Open diagnostics floating window"
+})

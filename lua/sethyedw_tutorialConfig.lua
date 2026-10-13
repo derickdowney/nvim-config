@@ -87,13 +87,18 @@ vim.keymap.set("n", "J", "mzJ`z", {
 
 
 -- Keep cursor centered when performing actions
--- vim.keymap.set("n", "<C-d>", "<C-d>zz", {
---     desc = "Keep cursor centered when moving half-page down"
--- })
--- vim.keymap.set("n", "<C-u>", "<C-u>zz", {
---     desc = "Keep cursor centered when moving half-page up"
--- })
---
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {
+    desc = "Keep cursor centered when moving half-page down"
+})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {
+    desc = "Keep cursor centered when moving half-page up"
+})
+vim.keymap.set("n", "n", "nzzzv", {
+    desc = "Next search result cursor centered"
+})
+vim.keymap.set("n", "N", "Nzzzv", {
+    desc = "Previous search result cursor centered"
+})
 
 -- LEFT OFF AT 10 minutes and 0 seconds!!!!
--- 
+
