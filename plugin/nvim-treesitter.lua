@@ -8,9 +8,9 @@ require('nvim-treesitter').setup {
 
 -- Full list of supported languages built into this plugin:
 -- https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
--- require('nvim-treesitter').install {
---     'javascript',
--- }
+require('nvim-treesitter').install {
+    'json',
+}
 
 vim.cmd('syntax off') -- Make it obvious if treesitter is missing
 
