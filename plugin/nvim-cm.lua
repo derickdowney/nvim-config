@@ -7,11 +7,19 @@ end
 vim.pack.add({
     {
         src = "https://bitbucket.org/hni-it/nvim-cm.git",
-        name = "nvim-cm"
+        name = "nvim-cm",
     },
 })
 
 require("cm").setup({
         lint = false,
-        -- lint_disable = 'format-required,format-indentation,paren-content-spacing,keyword-spacing,binary-operator-spacing,function-call-spacing,bracket-spacing,file-spacing,class-spacing',
+        lint_disable = 'format-required,format-indentation,paren-content-spacing,keyword-spacing,binary-operator-spacing,function-call-spacing,bracket-spacing,file-spacing,class-spacing',
 })
+
+vim.keymap.set({"n", "i"}, "<C-M-S-F8>", "<esc>:CmStart<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-S-F1>", "<esc>:CmClean<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-Y>", "<esc>:CmLoadAll<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-U>", "<esc>:CmLoad<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-p>", "<esc>:CmRun<cr>")
+vim.keymap.set({"n", "i"}, "<M-t>", "<esc>:CmClear<cr>")
+vim.keymap.set({"n", "i"}, "<M-o>", "<esc>:CmOverrides<cr>")

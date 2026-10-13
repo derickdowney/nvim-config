@@ -23,16 +23,16 @@ fzf.setup({
     files = {
         formatter = 'path.filename_first',
     },
-    grep = {
-        rg_opts = table.concat({
-            "--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
-            "--colors 'path:none'",
-            "--colors 'line:none'",
-            "--colors 'column:none'",
-            "--colors 'match:fg:225,255,229'",
-            "-e",
-        }, " "),
-    },
+    -- grep = {
+    --     rg_opts = table.concat({
+    --         "--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
+    --         "--colors 'path:none'",
+    --         "--colors 'line:none'",
+    --         "--colors 'column:none'",
+    --         "--colors 'match:fg:225,255,229'",
+    --         "-e",
+    --     }, " "),
+    -- },
 })
 
 -- "pookie's" personal setup
@@ -122,6 +122,9 @@ vim.keymap.set("n", "<leader>fc", "<cmd>FzfLua colorschemes<cr>", {
     desc = 'Pick colorscheme'
 })
 
+vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua resume<cr>", {
+    desc = "Fuzzy search resume"
+})
 
 -- LSP Keybindings
 vim.keymap.set('n', 'grr', fzf.lsp_references, {

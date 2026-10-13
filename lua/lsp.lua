@@ -40,6 +40,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 group = vim.api.nvim_create_augroup('my.lsp.fmt', { clear = false }),
                 buffer = ev.buf,
                 callback = function()
+                    -- Skip formatting if the filetype is "cm"
+                    if vim.bo[ev.buf].filetype == 'cm' then
+                        return
+                    end
                     vim.lsp.buf.format({ bufnr = ev.buf, id = client.id, timeout_ms = 1000 })
                 end,
             })
