@@ -71,7 +71,8 @@ fzf.setup({
 --
 
 vim.keymap.set("n", "<leader>ff", function()
-    fzf.files()
+    fzf.global()
+    -- fzf.files()
 end, {
     desc = "Fuzzy search files"
 })
