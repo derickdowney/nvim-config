@@ -5,11 +5,27 @@ vim.pack.add({
 
 vim.lsp.enable({
     -- "ty" is a Python LSP created by Astral (people behind uv)
-    'ty', -- also $ pixi global install ty
+    'ty',     -- also $ pixi global install ty
 
     'lua_ls', -- also $ pixi global install lua-language-server
 
-    'mojo', -- this works if your pixi virtual environment is activated
+    -- 'mojo',   -- this works if your pixi virtual environment is activated
+})
+
+
+vim.lsp.config("lua_ls", {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = {
+                    -- Lua Language Server doesn't recognize 'vim' as
+                    -- a valid global by default and flags it with a warning.
+                    -- This registers it as a global var which removes warning.
+                    "vim"
+                }
+            }
+        }
+    }
 })
 
 
