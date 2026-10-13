@@ -70,9 +70,18 @@ fzf.setup({
 -- })
 --
 
+vim.keymap.set("n", "<leader><space>", function()
+    fzf.global({
+        -- cwd = "C:\\CetDev\\dev\\extensions\\custom\\"
+    })
+end, {
+    desc = "Fuzzy search VS Code style"
+})
+
 vim.keymap.set("n", "<leader>ff", function()
-    fzf.global()
-    -- fzf.files()
+    fzf.files({
+        -- cwd = "C:\\CetDev\\dev\\extensions\\custom\\"
+    })
 end, {
     desc = "Fuzzy search files"
 })

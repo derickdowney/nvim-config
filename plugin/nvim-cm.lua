@@ -5,7 +5,13 @@ end
 
 -- Add the CET CM Compiler support to Neovim
 vim.pack.add({
-    { src = "https://bitbucket.org/hni-it/nvim-cm/src/main/" , name = "nvim-cm" },
+    {
+        src = "https://bitbucket.org/hni-it/nvim-cm.git",
+        name = "nvim-cm"
+    },
 })
 
--- require("nvim-cm")
+require("cm").setup({
+        lint = false,
+        -- lint_disable = 'format-required,format-indentation,paren-content-spacing,keyword-spacing,binary-operator-spacing,function-call-spacing,bracket-spacing,file-spacing,class-spacing',
+})
