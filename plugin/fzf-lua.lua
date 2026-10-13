@@ -4,14 +4,71 @@ vim.pack.add({
 
 local fzf = require("fzf-lua")
 
+
 fzf.setup({
+    winopts = {
+        height  = 0.95, -- window height
+        width   = 0.90, -- window width
+        preview = {
+            layout   = 'vertical',
+            vertical = "down:30%",
+        }
+    },
     keymap = {
         builtin = {
             ["<C-d>"] = 'preview-half-page-down',
             ["<C-u>"] = 'preview-half-page-up',
         },
     },
+    files = {
+        formatter = 'path.filename_first',
+    },
+    grep = {
+        rg_opts = table.concat({
+            "--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
+            "--colors 'path:none'",
+            "--colors 'line:none'",
+            "--colors 'column:none'",
+            "--colors 'match:fg:225,255,229'",
+            "-e",
+        }, " "),
+    },
 })
+
+-- "pookie's" personal setup
+-- from: https://github.com/vossenwout/pookie-dotfiles/blob/main/neovim/.config/nvim/init.lua
+-- fzf.setup({
+-- 	fzf_colors = false,
+-- 	grep = {
+-- 		rg_opts = table.concat({
+-- 			"--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
+-- 			"--colors 'path:none'",
+-- 			"--colors 'line:none'",
+-- 			"--colors 'column:none'",
+-- 			"--colors 'match:fg:225,255,229'",
+-- 			"-e",
+-- 		}, " "),
+-- 	},
+-- 	ui_select = true,
+-- 	keymap = {
+-- 		builtin = {
+-- 			["<C-d>"] = 'preview-page-down', -- Better scrolling within the displays
+-- 			["<C-u>"] = 'preview-page-up',
+-- 		},
+-- 	},
+-- 	winopts = {
+-- 		height  = 0.95, -- window height
+-- 		width   = 0.90, -- window width
+-- 		preview = {
+-- 			layout   = 'vertical',
+-- 			vertical = "down:30%",
+-- 		}
+-- 	},
+-- 	files = {
+-- 		formatter = 'path.filename_first',
+-- 	},
+-- })
+--
 
 vim.keymap.set("n", "<leader>ff", function()
     fzf.files()
