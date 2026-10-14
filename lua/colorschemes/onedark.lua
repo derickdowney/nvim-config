@@ -9,7 +9,7 @@ vim.pack.add({
 
 -- 1. Initialize the plugin with your default style
 require('onedark').setup({
-    style = 'dark', -- or 'warmer', 'deep', etc.
+    style = 'darker', -- or 'warmer', 'deep', etc.
 })
 require('onedark').load()
 
@@ -21,7 +21,7 @@ local function toggle_theme()
     is_dark = not is_dark
 
     if is_dark then
-        require('onedark').setup({ style = 'dark' })
+        require('onedark').setup({ style = 'darker' })
         print("Switched to Dark mode")
     else
         require('onedark').setup({ style = 'light' })
