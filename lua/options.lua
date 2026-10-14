@@ -14,14 +14,14 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 
 -- Map <space>e to :Explore
 -- Use `ctrl + ^` to switch back to last buffer (which started :Explore)
-vim.keymap.set("n", "<leader>ex", "<cmd>Explore<cr>", {
+vim.keymap.set("n", "<leader>e", "<cmd>Explore<cr>", {
     desc = "Explore buffer's current directory"
 })
-vim.keymap.set("n", "<leader>ec", function()
-    vim.cmd.Explore(vim.fn.stdpath("config"))
-end, {
-    desc = "Explore Neovim config directory"
-})
+-- vim.keymap.set("n", "<leader>ec", function()
+--     vim.cmd.Explore(vim.fn.stdpath("config"))
+-- end, {
+--     desc = "Explore Neovim config directory"
+-- })
 
 -- Allow <leader> to control windows
 vim.keymap.set("n", "<leader>wh", "<cmd>wincmd h<cr>", {

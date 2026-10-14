@@ -18,8 +18,10 @@ require("cm").setup({
 
 vim.keymap.set({"n", "i"}, "<C-M-S-F8>", "<esc>:CmStart<cr>")
 vim.keymap.set({"n", "i"}, "<C-M-S-F1>", "<esc>:CmClean<cr>")
-vim.keymap.set({"n", "i"}, "<C-M-Y>", "<esc>:CmLoadAll<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-Y>", "<esc>:CmClear<cr>:CmLoadAll<cr>")
 vim.keymap.set({"n", "i"}, "<C-M-U>", "<esc>:CmLoad<cr>")
 vim.keymap.set({"n", "i"}, "<C-M-p>", "<esc>:CmRun<cr>")
 vim.keymap.set({"n", "i"}, "<M-t>", "<esc>:CmClear<cr>")
 vim.keymap.set({"n", "i"}, "<M-o>", "<esc>:CmOverrides<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-S-F5>", "<esc>:CmEval custom.kimballinternational.kimInt.kimIntDevClear();<cr>")
+vim.keymap.set({"n", "i"}, "<C-M-E>", "<esc>:CmEval cm.runtime.enableDeprecatedErrors(false);<cr>")

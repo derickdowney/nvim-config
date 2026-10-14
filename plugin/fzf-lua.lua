@@ -123,8 +123,11 @@ vim.keymap.set("n", "<leader>fc", function()
         cwd = vim.fn.stdpath('config')
     })
 end, {
-    -- vim.keymap.set("n", "<leader>fc", "<cmd>FzfLua colorschemes<cr>", {
-    desc = 'Pick colorscheme'
+    desc = 'Fuzzy search nvim config'
+})
+
+vim.keymap.set("n", "<leader>cc", "<cmd>FzfLua colorschemes<cr>", {
+    desc = "Pick colorscheme"
 })
 
 vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua resume<cr>", {
