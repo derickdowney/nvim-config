@@ -118,7 +118,12 @@ end, {
     desc = "Fuzzy search live grep"
 })
 
-vim.keymap.set("n", "<leader>fc", "<cmd>FzfLua colorschemes<cr>", {
+vim.keymap.set("n", "<leader>fc", function()
+    fzf.files({
+        cwd = vim.fn.stdpath('config')
+    })
+end, {
+    -- vim.keymap.set("n", "<leader>fc", "<cmd>FzfLua colorschemes<cr>", {
     desc = 'Pick colorscheme'
 })
 
