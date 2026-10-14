@@ -70,7 +70,7 @@ dap.configurations.python = { -- https://github.com/microsoft/debugpy/wiki/Debug
     },
 }
 
-vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint, { desc = 'Debug toggle breakpoint' })
+vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, { desc = 'Debug toggle breakpoint' })
 vim.keymap.set('n', '<leader>dc', dap.continue, { desc = 'Debug continue' })
 vim.keymap.set('n', '<leader>dq', dap.terminate, { desc = 'Debug terminate' })
 
