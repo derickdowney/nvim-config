@@ -23,52 +23,7 @@ fzf.setup({
     files = {
         formatter = 'path.filename_first',
     },
-    -- grep = {
-    --     rg_opts = table.concat({
-    --         "--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
-    --         "--colors 'path:none'",
-    --         "--colors 'line:none'",
-    --         "--colors 'column:none'",
-    --         "--colors 'match:fg:225,255,229'",
-    --         "-e",
-    --     }, " "),
-    -- },
 })
-
--- "pookie's" personal setup
--- from: https://github.com/vossenwout/pookie-dotfiles/blob/main/neovim/.config/nvim/init.lua
--- fzf.setup({
--- 	fzf_colors = false,
--- 	grep = {
--- 		rg_opts = table.concat({
--- 			"--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
--- 			"--colors 'path:none'",
--- 			"--colors 'line:none'",
--- 			"--colors 'column:none'",
--- 			"--colors 'match:fg:225,255,229'",
--- 			"-e",
--- 		}, " "),
--- 	},
--- 	ui_select = true,
--- 	keymap = {
--- 		builtin = {
--- 			["<C-d>"] = 'preview-page-down', -- Better scrolling within the displays
--- 			["<C-u>"] = 'preview-page-up',
--- 		},
--- 	},
--- 	winopts = {
--- 		height  = 0.95, -- window height
--- 		width   = 0.90, -- window width
--- 		preview = {
--- 			layout   = 'vertical',
--- 			vertical = "down:30%",
--- 		}
--- 	},
--- 	files = {
--- 		formatter = 'path.filename_first',
--- 	},
--- })
---
 
 vim.keymap.set("n", "<leader><space>", function()
     fzf.global({
@@ -104,18 +59,36 @@ end, {
     desc = "Fuzzy search built-ins"
 })
 
-vim.keymap.set("n", "<leader>fg", function()
+vim.keymap.set("n", "<leader>fgg", function()
     fzf.grep_project({
         search_paths = vim.fn.expand("%:p:h")
     })
 end, {
-    desc = "Fuzzy search project grep"
+    desc = "Fuzzy grep from current buffer's directory"
+})
+
+vim.keymap.set("n", "<leader>fg.", function()
+    fzf.grep_project({
+        search_paths = vim.fn.expand(".")
+    })
+end, {
+    desc = "Fuzzy grep from current working directory"
+})
+
+vim.keymap.set("n", "<leader>fgb", function()
+    fzf.grep_project({
+        search_paths = vim.fn.expand("../../../base")
+    })
+end, {
+    desc = "Fuzzy grep from Configura base directory"
 })
 
 vim.keymap.set("n", "<leader>fl", function()
-    fzf.live_grep()
+    fzf.live_grep_glob({
+        search_paths = vim.fn.expand(".")
+    })
 end, {
-    desc = "Fuzzy search live grep"
+    desc = "Fuzzy live grep from current window directory"
 })
 
 vim.keymap.set("n", "<leader>fc", function()
