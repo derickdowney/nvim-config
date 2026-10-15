@@ -5,7 +5,8 @@ vim.pack.add({
 -- vim.keymap.set("n", "<leader>tn", ":FloatermNew<cr>", {
 --     desc = "Create new floating terminal"
 -- })
-vim.keymap.set("n", "<leader>t", "<cmd>FloatermToggle<cr>", {
+vim.keymap.set("n", "<C-t><C-t>", "<cmd>FloatermToggle<cr>", {
+    -- vim.keymap.set("n", "<leader>t", "<cmd>FloatermToggle<cr>", {
     desc = "Toggle last floating terminal"
 })
 
