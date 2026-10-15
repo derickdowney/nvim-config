@@ -4,11 +4,13 @@ vim.pack.add({
 
 
 vim.lsp.enable({
-    -- "ty" is a Python LSP created by Astral (people behind uv)
+
+    -- "ty" is a typesafe Python LSP created by Astral (people behind uv)
     'ty',     -- also $ pixi global install ty
+    -- "ruff" is a Python linter/formatter also created by Astral
+    'ruff',   -- also $ pixi global install ruff
 
     'lua_ls', -- also $ pixi global install lua-language-server
-
     -- 'mojo',   -- this works if your pixi virtual environment is activated
 })
 
@@ -48,6 +50,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 end,
             })
         end
+    end,
+})
+
+
+-- Ruff was not formatting on save
+-- This assumes the 'ruff' language server is already attached
+vim.api.nvim_create_autocmd('BufWritePre', {
+    group = vim.api.nvim_create_augroup('my.lsp.fmt', { clear = true }),
+    pattern = '*.py',
+    callback = function(ev)
+        vim.lsp.buf.format({
+            bufnr = ev.buf,
+            name = 'ruff',
+            timeout_ms = 3000,
+        })
     end,
 })
 
