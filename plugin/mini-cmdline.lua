@@ -1,0 +1,28 @@
+vim.pack.add({ 'https://github.com/nvim-mini/mini.cmdline' })
+
+require('mini.cmdline').setup({
+    autocomplete = {
+        -- map_arrows = true,
+    },
+    autocorrect = {
+        enable = false,
+    },
+})
+
+
+-- Configure Up / Down dynamically in command-line mode
+vim.keymap.set('c', '<Up>', function()
+    if vim.fn.pumvisible() == 1 then
+        return '<C-p>' -- Scroll up through autocomplete suggestions
+    else
+        return '<Up>' -- Fall back to standard command line history
+    end
+end, { expr = true, replace_keycodes = true, desc = "Smart Up navigation in cmdline" })
+
+vim.keymap.set('c', '<Down>', function()
+    if vim.fn.pumvisible() == 1 then
+        return '<C-n>' -- Scroll down through autocomplete suggestions
+    else
+        return '<Down>' -- Fall back to standard command line history
+    end
+end, { expr = true, replace_keycodes = true, desc = "Smart Down navigation in cmdline" })
