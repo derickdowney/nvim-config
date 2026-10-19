@@ -49,6 +49,12 @@ vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>", {
 })
 
 
+-- Delete current buffer and switch to previous buffer
+-- Or technically, switch to previous, then delete the last active buffer
+vim.keymap.set("n", "<leader>bd", "<cmd>bp | bd #<cr>", {
+    desc = "Delete current buffer and keep window"
+})
+
 ----------------------------------------
 -- Options
 ----------------------------------------
