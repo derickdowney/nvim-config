@@ -10,6 +10,9 @@ vim.lsp.enable({
     -- "ruff" is a Python linter/formatter also created by Astral
     'ruff',   -- also $ pixi global install ruff
 
+    -- "roslyn" is the dotnet language server
+    'roslyn_ls',
+
     'lua_ls', -- also $ pixi global install lua-language-server
     -- 'mojo',   -- this works if your pixi virtual environment is activated
 })
