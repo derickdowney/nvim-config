@@ -6,9 +6,9 @@ vim.pack.add({
 vim.lsp.enable({
 
     -- "ty" is a typesafe Python LSP created by Astral (people behind uv)
-    'ty',     -- also $ pixi global install ty
+    'ty',   -- also $ pixi global install ty
     -- "ruff" is a Python linter/formatter also created by Astral
-    'ruff',   -- also $ pixi global install ruff
+    'ruff', -- also $ pixi global install ruff
 
     -- "roslyn" is the dotnet language server
     'roslyn_ls',

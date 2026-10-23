@@ -24,6 +24,9 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 -- })
 
 -- Allow <leader> to control windows
+vim.keymap.set("n", "<leader>ww", "<C-w><C-w>", {
+    desc = "Go to another window"
+})
 vim.keymap.set("n", "<leader>wh", "<cmd>wincmd h<cr>", {
     desc = "Go to the left window"
 })
@@ -114,7 +117,11 @@ vim.diagnostic.config({
     severity_sort = true,
     update_in_insert = false,       -- Only rerun LSP after you exit Insert mode
     float = { source = 'if_many' }, -- "show multiple sources"
-    jump = { float = true },        -- When you ]d to next error, pop up error window
+    jump = {
+        on_jump = {
+            float = true, -- When you ]d to next error, pop up error window
+        },
+    },
 })
 
 vim.keymap.set("n", "<leader>wd", vim.diagnostic.open_float, {

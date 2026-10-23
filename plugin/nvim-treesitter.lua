@@ -6,6 +6,17 @@ require('nvim-treesitter').setup {
     install_dir = vim.fn.stdpath('data') .. '/site'
 }
 
+-- Use treesitter for all of Neovim's "fold" commands
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- But also prevent files from opening fully collapsed already
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
+
+----------------------------------------
+-- STUFF FOR NVIM_CM TREESITTER
+----------------------------------------
 local custom_ts_path = vim.fs.joinpath(
     vim.fn.stdpath('data'),
     'site',
