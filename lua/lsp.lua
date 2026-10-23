@@ -73,3 +73,68 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 
 
 -- GO TO `~/.config/nvim/plugins/fzf-lua.lua` to see keymaps for LSP
+
+-- VARIABLE HIGHLIGHTING
+-- When cursor stops, highlight all uses of the variable that cursor is on
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+    group = vim.api.nvim_create_augroup("lsp_document_highlight",
+        { clear = true }
+    ),
+    pattern = "*",
+    callback = function()
+        -- Call "documentHighlight" if active LSP supports it
+        local clients = vim.lsp.get_clients({ bufnr = 0 })
+        for _, client in ipairs(clients) do
+            if client:supports_method("textDocument/documentHighlight") then
+                vim.lsp.buf.document_highlight()
+                break
+            end
+        end
+    end,
+})
+
+-- When cursor moves, clear all LSP highlights
+vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+    group = "lsp_document_highlight",
+    pattern = "*",
+    callback = function()
+        -- Call "clearReferences" if active LSP supports it
+        local clients = vim.lsp.get_clients({ bufnr = 0 })
+        for _, client in ipairs(clients) do
+            if client:supports_method("textDocument/clearReferences") then
+                vim.lsp.buf.clear_references()
+                break
+            end
+        end
+    end,
+})
+
+-- How long after cursor movement should highlight appear?
+vim.o.updatetime = 250
+
+-- Highlight coloring
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     callback = function()
+--         local lsp_highlight_fg = "#FFFFFF"
+--         local lsp_highlight_bg = "#000000"
+--
+--
+--         vim.api.nvim_set_hl(0, "LspReferenceText", {
+--             bg = lsp_highlight_bg,
+--             fg = lsp_highlight_fg,
+--             bold = true,
+--         })
+--
+--         vim.api.nvim_set_hl(0, "LspReferenceRead", {
+--             bg = lsp_highlight_bg,
+--             fg = lsp_highlight_fg,
+--             bold = true,
+--         })
+--
+--         vim.api.nvim_set_hl(0, "LspReferenceWrite", {
+--             bg = lsp_highlight_bg,
+--             fg = lsp_highlight_fg,
+--             bold = true,
+--         })
+--     end,
+-- })
