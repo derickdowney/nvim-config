@@ -39,6 +39,18 @@ vim.keymap.set("n", "<leader>wk", "<cmd>wincmd k<cr>", {
 vim.keymap.set("n", "<leader>wl", "<cmd>wincmd l<cr>", {
     desc = "Go to the right window"
 })
+vim.keymap.set("n", "<leader>wy", "<cmd>wincmd h<cr><cmd>wincmd k<cr>", {
+    desc = "Go to the top-left window"
+})
+vim.keymap.set("n", "<leader>wn", "<cmd>wincmd h<cr><cmd>wincmd j<cr>", {
+    desc = "Go to the bottom-left window"
+})
+vim.keymap.set("n", "<leader>wo", "<cmd>wincmd l<cr><cmd>wincmd k<cr>", {
+    desc = "Go to the top-right window"
+})
+vim.keymap.set("n", "<leader>w.", "<cmd>wincmd l<cr><cmd>wincmd j<cr>", {
+    desc = "Go to the bottom-right window"
+})
 vim.keymap.set("n", "<leader>wq", "<cmd>wincmd q<cr>", {
     desc = "Quit window"
 })
@@ -152,5 +164,30 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.bo.omnifunc = ""
         -- If you want to completely turn off the auto-trigger flag locally:
         vim.opt_local.complete:remove('o')
+    end,
+})
+
+
+----------------------------------------
+-- Load session_keymaps.lua if they exist
+----------------------------------------
+
+vim.api.nvim_create_autocmd("SessionLoadPost", {
+    callback = function()
+        if vim.v.this_session ~= "" then
+            -- Look for session_keymaps.lua in same directory as Session.vim
+            local session_dir = vim.fn.fnamemodify(vim.v.this_session, ":h")
+            local maps_file = session_dir .. "/session_keymaps.lua"
+
+            if vim.fn.filereadable(maps_file) == 1 then
+                -- Safely load and execute the Lua mapping file
+                local ok, err = pcall(dofile, maps_file)
+                if not ok then
+                    vim.notify("Error loading session keymaps: " .. err, vim.log.levels.ERROR)
+                else
+                    vim.notify("Loaded session keymaps: " .. maps_file, vim.log.levels.INFO)
+                end
+            end
+        end
     end,
 })

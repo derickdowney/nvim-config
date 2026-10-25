@@ -15,3 +15,10 @@ vim.keymap.set("n", "<leader>er", function()
 end, {
     desc = "Reveal buffer's directory in mini files"
 })
+
+
+vim.keymap.set("n", "<leader>ec", function()
+    files.open(vim.fn.stdpath('config'), false)
+end, {
+    desc = "Reveal buffer's directory in mini files"
+})
