@@ -109,6 +109,14 @@ end, {
     desc = "Fuzzy grep from Configura base directory"
 })
 
+vim.keymap.set("n", "<leader>fgc", function()
+    fzf.grep_project({
+        search_paths = vim.fn.stdpath('config')
+    })
+end, {
+    desc = "Fuzzy grep from Configura base directory"
+})
+
 vim.keymap.set("n", "<leader>fl", function()
     fzf.live_grep_glob({
         search_paths = vim.fn.expand(".")

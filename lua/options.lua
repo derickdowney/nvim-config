@@ -117,11 +117,7 @@ vim.diagnostic.config({
     severity_sort = true,
     update_in_insert = false,       -- Only rerun LSP after you exit Insert mode
     float = { source = 'if_many' }, -- "show multiple sources"
-    jump = {
-        on_jump = {
-            float = true, -- When you ]d to next error, pop up error window
-        },
-    },
+    jump = { float = true, },       -- When you ]d to next error, pop up error window
 })
 
 vim.keymap.set("n", "<leader>wd", vim.diagnostic.open_float, {
