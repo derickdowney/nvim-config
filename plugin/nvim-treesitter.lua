@@ -90,6 +90,7 @@ require('nvim-treesitter').install {
     'python',
     'c_sharp',
     'xml',
+    'toml',
 }
 
 vim.cmd('syntax off') -- Make it obvious if treesitter is missing

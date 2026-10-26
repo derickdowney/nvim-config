@@ -23,6 +23,21 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 --     desc = "Explore Neovim config directory"
 -- })
 
+
+-- Use <C-arrow> and <leader>arrow to navigate windows
+vim.keymap.set({ "n", "t" }, "<leader>w1", "<cmd>wincmd h<cr><cmd>wincmd k<cr>", {
+    desc = "Go to left window"
+})
+vim.keymap.set({ "n", "t" }, "<leader>w2", "<cmd>wincmd l<cr><cmd>wincmd k<cr>", {
+    desc = "Go to right window"
+})
+vim.keymap.set({ "n", "t" }, "<leader>w3", "<cmd>wincmd h<cr><cmd>wincmd j<cr>i", {
+    desc = "Go to up window"
+})
+vim.keymap.set({ "n", "t" }, "<leader>w4", "<cmd>wincmd l<cr><cmd>wincmd j<cr>", {
+    desc = "Go to down window"
+})
+
 -- Allow <leader> to control windows
 vim.keymap.set("n", "<leader>ww", "<C-w><C-w>", {
     desc = "Go to another window"
@@ -39,18 +54,18 @@ vim.keymap.set("n", "<leader>wk", "<cmd>wincmd k<cr>", {
 vim.keymap.set("n", "<leader>wl", "<cmd>wincmd l<cr>", {
     desc = "Go to the right window"
 })
-vim.keymap.set("n", "<leader>wy", "<cmd>wincmd h<cr><cmd>wincmd k<cr>", {
-    desc = "Go to the top-left window"
-})
-vim.keymap.set("n", "<leader>wn", "<cmd>wincmd h<cr><cmd>wincmd j<cr>", {
-    desc = "Go to the bottom-left window"
-})
-vim.keymap.set("n", "<leader>wo", "<cmd>wincmd l<cr><cmd>wincmd k<cr>", {
-    desc = "Go to the top-right window"
-})
-vim.keymap.set("n", "<leader>w.", "<cmd>wincmd l<cr><cmd>wincmd j<cr>", {
-    desc = "Go to the bottom-right window"
-})
+-- vim.keymap.set("n", "<leader>wy", "<cmd>wincmd h<cr><cmd>wincmd k<cr>", {
+--     desc = "Go to the top-left window"
+-- })
+-- vim.keymap.set("n", "<leader>wn", "<cmd>wincmd h<cr><cmd>wincmd j<cr>", {
+--     desc = "Go to the bottom-left window"
+-- })
+-- vim.keymap.set("n", "<leader>wo", "<cmd>wincmd l<cr><cmd>wincmd k<cr>", {
+--     desc = "Go to the top-right window"
+-- })
+-- vim.keymap.set("n", "<leader>w.", "<cmd>wincmd l<cr><cmd>wincmd j<cr>", {
+--     desc = "Go to the bottom-right window"
+-- })
 vim.keymap.set("n", "<leader>wq", "<cmd>wincmd q<cr>", {
     desc = "Quit window"
 })
