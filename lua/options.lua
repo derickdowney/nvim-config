@@ -25,16 +25,16 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 
 
 -- Use <C-arrow> and <leader>arrow to navigate windows
-vim.keymap.set({ "n", "t" }, "<leader>w1", "<cmd>wincmd h<cr><cmd>wincmd k<cr>", {
+vim.keymap.set({ "n", "t" }, "0w1", "<cmd>wincmd h<cr><cmd>wincmd k<cr>", {
     desc = "Go to left window"
 })
-vim.keymap.set({ "n", "t" }, "<leader>w2", "<cmd>wincmd l<cr><cmd>wincmd k<cr>", {
+vim.keymap.set({ "n", "t" }, "0w2", "<cmd>wincmd l<cr><cmd>wincmd k<cr>", {
     desc = "Go to right window"
 })
-vim.keymap.set({ "n", "t" }, "<leader>w3", "<cmd>wincmd h<cr><cmd>wincmd j<cr>i", {
+vim.keymap.set({ "n", "t" }, "0w3", "<cmd>wincmd h<cr><cmd>wincmd j<cr>i", {
     desc = "Go to up window"
 })
-vim.keymap.set({ "n", "t" }, "<leader>w4", "<cmd>wincmd l<cr><cmd>wincmd j<cr>", {
+vim.keymap.set({ "n", "t" }, "0w4", "<cmd>wincmd l<cr><cmd>wincmd j<cr>", {
     desc = "Go to down window"
 })
 
