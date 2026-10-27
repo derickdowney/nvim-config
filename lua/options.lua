@@ -142,9 +142,9 @@ vim.o.confirm = true -- raise dialog if unsaved buffer
 
 vim.diagnostic.config({
     severity_sort = true,
-    update_in_insert = false,       -- Only rerun LSP after you exit Insert mode
-    float = { source = 'if_many' }, -- "show multiple sources"
-    jump = { float = true, },       -- When you ]d to next error, pop up error window
+    update_in_insert = false,  -- Only rerun LSP after you exit Insert mode
+    float = { source = true }, -- "show multiple sources"
+    jump = { float = true, },  -- When you ]d to next error, pop up error window
 })
 
 vim.keymap.set("n", "<leader>wd", vim.diagnostic.open_float, {
@@ -161,26 +161,27 @@ vim.keymap.set("c", "<M-f>", "<S-Right>")
 
 
 ----------------------------------------
--- Autocomplete
+-- Native Autocomplete --- DISABLED SO I CAN USE blink.cmp
 -- from: https://www.youtube.com/watch?v=s7zb73fgXqU
 ----------------------------------------
-vim.o.autocomplete = true
-vim.opt.completeopt = { 'menuone', 'noselect' }
-vim.keymap.set("i", "<Up>", "<C-p>")
-vim.keymap.set("i", "<Down>", "<C-n>")
+-- vim.o.autocomplete = true
+-- vim.opt.completeopt = { 'menuone', 'noselect', 'preview' }
+-- vim.keymap.set("i", "<Up>", "<C-p>")
+-- vim.keymap.set("i", "<Down>", "<C-n>")
 -- vim.opt.complete:append('o') -- append "omni-func" to autocomplete
 -- vim.o.pumborder = 'rounded'
--- vim.o.pumheight = 5 -- limit to top 5 suggestions
--- Disable autocomplete for markdown files
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
-    callback = function()
-        -- Disable native autocomplete for this buffer
-        vim.bo.omnifunc = ""
-        -- If you want to completely turn off the auto-trigger flag locally:
-        vim.opt_local.complete:remove('o')
-    end,
-})
+-- vim.o.pumheight = 5          -- limit to top 5 suggestions
+--
+-- -- Disable autocomplete for markdown files
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = "markdown",
+--     callback = function()
+--         -- Disable native autocomplete for this buffer
+--         vim.bo.omnifunc = ""
+--         -- If you want to completely turn off the auto-trigger flag locally:
+--         vim.opt_local.complete:remove('o')
+--     end,
+-- })
 
 
 ----------------------------------------

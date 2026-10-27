@@ -1,8 +1,20 @@
 {
   "plugins": {
+    "blink.cmp": {
+      "rev": "1e4cb39b9200950dca1cbc4d630c60c16eb8e7e4",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "fd9a48ebbe6ec30d5dfcc5b42c243941ccdca1aa",
+      "src": "https://github.com/saghen/blink.lib"
+    },
     "codediff.nvim": {
       "rev": "09d9ebef2cc5a5c04db7a349cd6c61bdf84ecc8e",
       "src": "https://github.com/esmuellert/codediff.nvim"
+    },
+    "friendly-snippets": {
+      "rev": "b4d01b0fdf3c9a549961c2f9ffe8dc09be166219",
+      "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "fzf-lua": {
       "rev": "6995a3f8ba256a7a9949747ffbdf5a88eb8a3697",
@@ -19,10 +31,6 @@
     "lualine.nvim": {
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
-    },
-    "mini.cmdline": {
-      "rev": "1006a386ab8e6d3c4567fddd31cd9d47b3cb63ba",
-      "src": "https://github.com/nvim-mini/mini.cmdline"
     },
     "mini.files": {
       "rev": "3fe8e33d37a8c455762800c39bab9af317dd53b4",

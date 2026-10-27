@@ -41,6 +41,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
         if not client then return end
 
+        -- Enable native LSP autocompletion with autotrigger
+        -- vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+
         -- Run "format" upon save
         if not client:supports_method('textDocument/willSaveWaitUntil')
             and client:supports_method('textDocument/formatting') then
