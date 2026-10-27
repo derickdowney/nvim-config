@@ -67,6 +67,15 @@ end, {
     desc = 'Fuzzy search nvim config'
 })
 
+vim.keymap.set("n", "<leader>ffp", function()
+    fzf.files({
+        cwd = "/users/derick/projects/",
+    })
+end, {
+    desc = 'Fuzzy search projects folder'
+})
+
+
 vim.keymap.set("n", "<leader>fh", function()
     fzf.help_tags()
 end, {
@@ -107,6 +116,14 @@ vim.keymap.set("n", "<leader>fgb", function()
     })
 end, {
     desc = "Fuzzy grep from Configura base directory"
+})
+
+vim.keymap.set("n", "<leader>fgp", function()
+    fzf.grep_project({
+        search_paths = "/users/derick/projects/",
+    })
+end, {
+    desc = "Fuzzy grep from projects folder"
 })
 
 vim.keymap.set("n", "<leader>fgc", function()
