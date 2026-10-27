@@ -39,6 +39,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('my.lsp', { clear = true }),
     callback = function(ev)
         local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+        if not client then return end
+
+        -- Run "format" upon save
         if not client:supports_method('textDocument/willSaveWaitUntil')
             and client:supports_method('textDocument/formatting') then
             vim.api.nvim_create_autocmd('BufWritePre', {
@@ -63,10 +66,23 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     group = vim.api.nvim_create_augroup('my.lsp.fmt', { clear = true }),
     pattern = '*.py',
     callback = function(ev)
+        -- Organize imports using Ruff
+        vim.lsp.buf.code_action({
+            bufnr = ev.buf,
+            context = {
+                only = { 'source.organizeImports' },
+            },
+            apply = true,
+        })
+        -- "organizeImports" runs async so we have to wait for it to finish 😭
+        vim.wait(500)
+
+        -- Format the buffer using Ruff
         vim.lsp.buf.format({
             bufnr = ev.buf,
             name = 'ruff',
             timeout_ms = 3000,
+            async = false,
         })
     end,
 })
