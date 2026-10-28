@@ -1,0 +1,11 @@
+{
+  "name": "derick-vscode-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": ["cm"],
+        "path": "./configura-cm.jsonc"
+      }
+    ]
+  }
+}

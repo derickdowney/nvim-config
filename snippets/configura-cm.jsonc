@@ -1,0 +1,2958 @@
+{
+	"Add Override: manipulateObjectToLabel()": {
+		"prefix": "manipulateObjectToLabel()",
+		"body": [
+			"/**\r",
+			" * Manipulate object to label.\r",
+			" */\r",
+			"public str manipulateObjectToLabel(str key, str label, Object o, SubSet domain) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: manipulateInputSetting()": {
+		"prefix": "manipulateInputSetting()",
+		"body": [
+			"/**\r",
+			" * Manipulate input settings.\r",
+			" */\r",
+			"public void manipulateInputSetting(str key, PropInputSetting setting, PropDef def) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"link": {
+		"prefix": "link",
+		"body": [
+			"Linköping"
+		],
+		"description": ""
+	},
+	"Add Override: earlyInitialize()": {
+		"prefix": "earlyInitialize()",
+		"body": [
+			"/**\r",
+			" * Early initialize.\r",
+			" */\r",
+			"public void earlyInitialize() {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: graphicsOffset()": {
+		"prefix": "graphicsOffset()",
+		"body": [
+			"/**\r",
+			" * Graphics offset.\r",
+			" */\r",
+			"public point graphicsOffset(str key=cAOMainData) {\r",
+			"    if (key == cAOMainData) {\r",
+			"        return (dimension(cKimIntW)/2, dimension(cKimIntD)/2, 0);\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"kimintrebuildalltollboxes": {
+		"prefix": "kimintrebuildalltollboxes",
+		"body": [
+			"kimIntRebuildAllTollboxes();"
+		],
+		"description": ""
+	},
+	"addtoqdsection": {
+		"prefix": "addtoqdsection",
+		"body": [
+			"addToQDSection(_onSurfacePower, function onSurfaceKIMINTPowerTechQdSectLimb);"
+		],
+		"description": ""
+	},
+	"Add Override: Catalog": {
+		"prefix": "catalog()",
+		"body": [
+			"/**\r",
+			" * Catalog per key.\r",
+			" */\r",
+			"public str catalog(str dataKey)  {\r",
+			"    return dataKey == cAOMainData ? cKimIntQdCatCode : super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: useCatalog2D": {
+		"prefix": "useCatalog2D()",
+		"body": [
+			"/**\r",
+			" * Use the 2D from the catalog.\r",
+			" */\r",
+			"public bool useCatalog2D(str dataKey=cAOMainData) {\r",
+			"    return true;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: useCatalog3D()": {
+		"prefix": "useCatalog3D()",
+		"body": [
+			"/**\r",
+			" * Use catalog 3D.\r",
+			" */\r",
+			"public bool useCatalog3D(str dataKey=cAOMainData) {\r",
+			"    return true;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: isVisible()": {
+		"prefix": "isVisible()",
+		"body": [
+			"/**\r",
+			" * Return true if the connector 'c' in this snapper should be visible.\r",
+			" */\r",
+			"public bool isVisible(Connector c) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: widthDomain()": {
+		"prefix": "widthDomain",
+		"body": [
+			"/**\r",
+			" * Width domain.\r",
+			" */\r",
+			"public SubSet widthDomain() {\r",
+			"    return DoubleEnum(1inch);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: get2DByKey()": {
+		"prefix": "get2DByKey",
+		"body": [
+			"/**\r",
+			" * Get 2D by key.\r",
+			" */\r",
+			"public Graph get2DByKey(str dataKey) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"invalidate2D(flag2D=dirty2D.rebuild);": {
+		"prefix": "invalidate2D",
+		"body": [
+			"invalidate2D(flag2D=dirty2D.rebuild);"
+		],
+		"description": ""
+	},
+	"invalidate3D(flag3D=dirty3D.all);": {
+		"prefix": "invalidate3D",
+		"body": [
+			"invalidate3D(flag3D=dirty3D.all);"
+		],
+		"description": ""
+	},
+	"Add Override: get3DByKey()": {
+		"prefix": "get3DByKey",
+		"body": [
+			"/**\r",
+			" * Get 3D by key.\r",
+			" */\r",
+			"public Primitive3D get3DByKey(FetchEnv3D env, str dataKey) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: heightDomain()": {
+		"prefix": "heightDomain",
+		"body": [
+			"/**\r",
+			" * Height domain.\r",
+			" */\r",
+			"public SubSet heightDomain() {\r",
+			"    return DoubleEnum(28.86inch);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: depthDomain()": {
+		"prefix": "depthDomain",
+		"body": [
+			"/**\r",
+			" * Depth domain.\r",
+			" */\r",
+			"public SubSet depthDomain() {\r",
+			"    return DoubleEnum([48inch, 60inch]);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: graphicsRot()": {
+		"prefix": "graphicsRot",
+		"body": [
+			"/**\r",
+			" * Graphics rotation.\r",
+			" */\r",
+			"public orientation graphicsRot(str key=cAOMainData) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: visibleInProperties()": {
+		"prefix": "visibleInProperties",
+		"body": [
+			"/**\r",
+			" * Visible in properties.\r",
+			" */\r",
+			"public bool visibleInProperties(str key, PropObj owner, symbol{} attributes=null) {\r",
+			"    return true;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: lateInitialize()": {
+		"prefix": "lateInitialize",
+		"body": [
+			"/**\r",
+			" * Late initialize.\r",
+			" */\r",
+			"public void lateInitialize() {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"if(space)space.updateConnectors(this)": {
+		"prefix": "if(space)space.updateConnectors(this)",
+		"body": [
+			"if (space) space.updateConnectors(this);"
+		],
+		"description": ""
+	},
+	"Add Override: allowSnap()": {
+		"prefix": "allowSnap",
+		"body": [
+			"/**\r",
+			" * Returns true if the snap 's' of this snapper is allowed to snap to the attach 'a'.\r",
+			" */\r",
+			"public bool allowSnap(Connector s, Connector a) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: allowAttach()": {
+		"prefix": "allowAttach",
+		"body": [
+			"/**\r",
+			" * Returns true if the attach 'a' of this snapper is allowed to attach to the snap 's'.\r",
+			" */\r",
+			"public bool allowAttach(Connector a, Connector s) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"accessory-from-scratch": {
+		"prefix": "accessory-from-scratch",
+		"body": [
+			"/** Configura CET Source Copyright Notice (CETSC)\r",
+			"\r",
+			"   This file contains Configura CM source code and is part of the\r",
+			"   Configura CET Development Platform (CETDEV). Configura CM\r",
+			"   is a programming language created by Configura Sverige AB.\r",
+			"   Configura, Configura CET and Configura CM are trademarks of\r",
+			"   Configura Sverige AB. Configura Sverige AB owns Configura CET,\r",
+			"   Configura CM, and CETDEV.\r",
+			"\r",
+			"   Copyright (C) 2004 Configura Sverige AB, All rights reserved.\r",
+			"\r",
+			"   You can modify this source file under the terms of the Configura CET\r",
+			"   Source Licence Agreement (CETSL) as published by Configura Sverige AB.\r",
+			"\r",
+			"   Configura Sverige AB has exclusive rights to all changes, modifications,\r",
+			"   and corrections of this source file. Configura Sverige AB has exclusive\r",
+			"   rights to any new source file containing material from this source file.\r",
+			"   A new source file based on this source file or containing material from\r",
+			"   this source file has to include this Configura CET Source Copyright Notice\r",
+			"   in its full content. All changes, modifications, and corrections mentioned\r",
+			"   above shall be reported to Configura Sverige AB within One Month from\r",
+			"   the date that the modification occurred.\r",
+			"\r",
+			"   Configura CM is distributed in the hope that it will be useful, but\r",
+			"   WITHOUT ANY WARRANTY; without even the implied warranty of\r",
+			"   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\r",
+			"   See the CETSL for more details.\r",
+			"\r",
+			"   You should have received a copy of the CETSL along with the CETDEV.\r",
+			"   If not, write to Configura Sverige AB, Box 306, SE-581 02 Linköping, Sweden.\r",
+			"   Tel +46 13377800, Fax +46 13377855,\r",
+			"   Email: info@configura.com, www.configura.com\r",
+			"\r",
+			"   END OF CETSC\r",
+			"*/\r",
+			"package custom.kimballinternational.national.accessory;\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * National accessory keyboard tray quick delivery.\r",
+			" */\r",
+			"public class NacKeyboardTrayQD extends KimIntSurfaceAccessory {\r",
+			"\r",
+			"    /***********************************************************************\r",
+			"     * Initialization\r",
+			"     ***********************************************************************/\r",
+			"\r",
+			"    /**\r",
+			"     * Brand env.\r",
+			"     */\r",
+			"    public KimIntBrandEnv brandEnv() {\r",
+			"        return natBrandEnv();\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /**\r",
+			"     * Initialize data.\r",
+			"     */\r",
+			"    public void initializeData() {\r",
+			"        super();\r",
+			"        syncData();\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /***********************************************************************\r",
+			"     * Domains\r",
+			"     ***********************************************************************/\r",
+			"\r",
+			"    /**\r",
+			"     * Width domain.\r",
+			"     */\r",
+			"    public SubSet widthDomain() {\r",
+			"        return DoubleEnum(23.5inch);\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /**\r",
+			"     * Depth domain.\r",
+			"     */\r",
+			"    public SubSet depthDomain() {\r",
+			"        return DoubleEnum(13.938inch);\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /**\r",
+			"     * Height domain.\r",
+			"     */\r",
+			"    public SubSet heightDomain() {\r",
+			"        return DoubleEnum(1.375inch);\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /***********************************************************************\r",
+			"     * Connectors\r",
+			"     ***********************************************************************/\r",
+			"\r",
+			"    /**\r",
+			"     * Returns true if the snap 's' of this snapper is allowed to snap to the attach 'a'.\r",
+			"     */\r",
+			"    public bool allowSnap(Connector s, Connector a) {\r",
+			"        return false;\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /**\r",
+			"     * Returns true if the attach 'a' of this snapper is allowed to attach to the snap 's'.\r",
+			"     */\r",
+			"    public bool allowAttach(Connector a, Connector s) {\r",
+			"        return false;\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /***********************************************************************\r",
+			"     * Graphics\r",
+			"     ***********************************************************************/\r",
+			"\r",
+			"    /**\r",
+			"     * Graphics offset.\r",
+			"     */\r",
+			"    public point graphicsOffset(str key=cAOMainData) {\r",
+			"        return (dimension(cKimIntW)/2, dimension(cKimIntD)/2, -25.0625inch);\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /***********************************************************************\r",
+			"     * Data\r",
+			"     ***********************************************************************/\r",
+			"    /**\r",
+			"     * Catalog per key.\r",
+			"     */\r",
+			"    public str catalog(str dataKey)  {\r",
+			"        return cKimIntQdCatCode;\r",
+			"    }\r",
+			"\r",
+			"\r",
+			"    /***********************************************************************\r",
+			"     * Parts\r",
+			"     ***********************************************************************/\r",
+			"\r",
+			"    /**\r",
+			"     * Part type.\r",
+			"     */\r",
+			"    public str partNumber(str dataKey=cAOMainData) {\r",
+			"        return \"QNAC1424KT\";\r",
+			"    }\r",
+			"\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: partPrefix()": {
+		"prefix": "partPrefix",
+		"body": [
+			"/**\r",
+			" * Part prefix.\r",
+			" */\r",
+			"public str partPrefix(str dataKey=cAOMainData) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: partNumber()": {
+		"prefix": "partNumber",
+		"body": [
+			"/**\r",
+			" * Part number.\r",
+			" */\r",
+			"public str partNumber(str dataKey=cAOMainData) {\r",
+			"    if (dataKey == cAOMainData) {\r",
+			"        return \"\";\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"diffRebuildCoreProperties(rebuildFlag=diffRebuildProps.all);": {
+		"prefix": "diffRebuildCoreProperties(rebuildFlag=diffRebuildProps.all)",
+		"body": [
+			"diffRebuildCoreProperties(rebuildFlag=diffRebuildProps.all);"
+		],
+		"description": ""
+	},
+	"Add Override: nomWidthDomain()": {
+		"prefix": "nomWidthDomain",
+		"body": [
+			"/**\r",
+			" * Nominal width domain.\r",
+			" */\r",
+			"public SubSet nomWidthDomain() {\r",
+			"    return widthDomain();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: nomDepthDomain()": {
+		"prefix": "nomDepthDomain",
+		"body": [
+			"/**\r",
+			" * Nominal depth domain.\r",
+			" */\r",
+			"public SubSet nomDepthDomain() {\r",
+			"    return depthDomain();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: nomHeightDomain()": {
+		"prefix": "nomHeightDomain",
+		"body": [
+			"/**\r",
+			" * Nominal height domain.\r",
+			" */\r",
+			"public SubSet nomHeightDomain() {\r",
+			"    return heightDomain();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: dimensionChanged()": {
+		"prefix": "dimensionChanged",
+		"body": [
+			"/**\r",
+			" * Dimension changed.\r",
+			" */\r",
+			"public void dimensionChanged(str id, double oldVal, double newVal) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Area Comment: Dimensions": {
+		"prefix": "*Dimensions",
+		"body": [
+			"/***********************************************************************\r",
+			" * Dimensions\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Discontinued": {
+		"prefix": "*Discontinued",
+		"body": [
+			"/***********************************************************************\r",
+			" * Discontinued\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Domains": {
+		"prefix": "*Domains",
+		"body": [
+			"/***********************************************************************\r",
+			" * Domains\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Properties": {
+		"prefix": "*Properties",
+		"body": [
+			"/***********************************************************************\r",
+			" * Properties\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Graphics": {
+		"prefix": "*Graphics",
+		"body": [
+			"/***********************************************************************\r",
+			" * Graphics\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Data": {
+		"prefix": "*Data",
+		"body": [
+			"/***********************************************************************\r",
+			" * Data\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Parts": {
+		"prefix": "*Parts",
+		"body": [
+			"/***********************************************************************\r",
+			" * Parts\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Initialization": {
+		"prefix": "*Initialization",
+		"body": [
+			"/***********************************************************************\r",
+			" * Initialization\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Construction": {
+		"prefix": "*Construction",
+		"body": [
+			"/***********************************************************************\r",
+			" * Construction\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: CmSym": {
+		"prefix": "*CmSym",
+		"body": [
+			"/***********************************************************************\r",
+			" * CmSym\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Flags": {
+		"prefix": "*Flags",
+		"body": [
+			"/***********************************************************************\r",
+			" * Flags\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Animations": {
+		"prefix": "*Animations",
+		"body": [
+			"/***********************************************************************\r",
+			" * Animations\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Categories / Visibility": {
+		"prefix": "*Categories / Visibility",
+		"body": [
+			"/***********************************************************************\r",
+			" * Categories / Visibility\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Ganging": {
+		"prefix": "*Ganging",
+		"body": [
+			"/***********************************************************************\r",
+			" * Ganging\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Vessels": {
+		"prefix": "*Vessels",
+		"body": [
+			"/***********************************************************************\r",
+			" * Vessels\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Power Inserts": {
+		"prefix": "*Power Inserts",
+		"body": [
+			"/***********************************************************************\r",
+			" * Power Inserts\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Xapi": {
+		"prefix": "*Xapi",
+		"body": [
+			"/***********************************************************************\r",
+			" * Xapi\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Load": {
+		"prefix": "*Load",
+		"body": [
+			"/***********************************************************************\r",
+			" * Load\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"Add Area Comment: Connectors": {
+		"prefix": "*Connectors",
+		"body": [
+			"/***********************************************************************\r",
+			" * Connectors\r",
+			" ***********************************************************************/",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"StrBuf pn(partPrefix());": {
+		"prefix": "StrBuf pn(partprefix());",
+		"body": [
+			"StrBuf pn(partPrefix());"
+		],
+		"description": ""
+	},
+	"lonelyRemove": {
+		"prefix": "lonelyRemove",
+		"body": [
+			"/**\r",
+			" * Constructor.\r",
+			" */\r",
+			"public constructor() {\r",
+			"    super();\r",
+			"    lonelyRemove = true;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: constructor()": {
+		"prefix": "constructor",
+		"body": [
+			"/**\r",
+			" * Constructor.\r",
+			" */\r",
+			"public constructor() {\r",
+			"    super();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: widthDomain(), depthDomain(), and heightDomain()": {
+		"prefix": "wdh",
+		"body": [
+			"/**\r",
+			" * Width domain.\r",
+			" */\r",
+			"public SubSet widthDomain() {\r",
+			"    return DoubleEnum(1inch);\r",
+			"}\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * Depth domain.\r",
+			" */\r",
+			"public SubSet depthDomain() {\r",
+			"    return DoubleEnum([48inch, 60inch]);\r",
+			"}\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * Height domain.\r",
+			" */\r",
+			"public SubSet heightDomain() {\r",
+			"    return DoubleEnum(28.86inch);\r",
+			"}\r",
+			"\r",
+			""
+		],
+		"description": ""
+	},
+	"Add Override: heightAboveFloor()": {
+		"prefix": "heightAboveFloor",
+		"body": [
+			"/**\r",
+			" * Height above floor.\r",
+			" */\r",
+			"public double heightAboveFloor() {\r",
+			"    return 21.848892inch;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: brandEnv()": {
+		"prefix": "brandEnv",
+		"body": [
+			"/**\r",
+			" * Brand environment.\r",
+			" */\r",
+			"public KimIntBrandEnv brandEnv() { return natBrandEnv(); }"
+		],
+		"description": ""
+	},
+	"Add Override: connectOffset()": {
+		"prefix": "connectOffset",
+		"body": [
+			"/**\r",
+			" * Connect offset.\r",
+			" */\r",
+			"public point connectOffset(Connector c0, Connector c1, bool snap=false, bool attach=true) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: visiblePosition()": {
+		"prefix": "visiblePosition",
+		"body": [
+			"/**\r",
+			" * Visible position of 'c' where 'p' is its current position in snapper coordinates.\r",
+			" */\r",
+			"public point visiblePosition(Connector c, point p, Connector t) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: thicknessDomain()": {
+		"prefix": "thicknessDomain",
+		"body": [
+			"/**\r",
+			" * Thickness domain.\r",
+			" */\r",
+			"public SubSet thicknessDomain() {\r",
+			"    return DoubleEnum(1inch);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: powerInsertLocations()": {
+		"prefix": "powerInsertLocations",
+		"body": [
+			"/**\r",
+			" * Allowed power insert locations.\r",
+			" */\r",
+			"public str[] powerInsertLocations(KimIntPowerComponent insert) {\r",
+			"    str[] res();\r",
+			"\r",
+			"    if (insert in KimIntG1Insert) {\r",
+			"        res += [cKimIntLeftInsert, cKimIntRightInsert];\r",
+			"    }\r",
+			"\r",
+			"    if (insert in KimIntG10Insert) {\r",
+			"        res += [cKimIntLeftInsert, cKimIntCenterInsert, cKimIntRightInsert];\r",
+			"    }\r",
+			"\r",
+			"    return res;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: setPos()": {
+		"prefix": "setPos",
+		"body": [
+			"/**\r",
+			" * Position the snapper at 'p'.\r",
+			" */\r",
+			"public void setPos(point p) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: propChanged()": {
+		"prefix": "propChanged",
+		"body": [
+			"/**\r",
+			" * Prop changed.\r",
+			" */\r",
+			"public void propChanged(str key, Object newValue, Object oldValue, Object env=null) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: animationTrySnap(..)": {
+		"prefix": "animationTrySnap",
+		"body": [
+			"/**\r",
+			" * Animation try snap.\r",
+			" */\r",
+			"public bool animationTrySnap(Connector mySnap, Connector targetAttach, line mouseLine,\r",
+			"                              bool connect=true, bool undoable=false, ModifyEnv env=null) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: allowTrySnap(..)": {
+		"prefix": "allowTrySnap",
+		"body": [
+			"/**\r",
+			" * Returns true if the snap 's' of this snapper is allowed to snap to the attach 'a'.\r",
+			" */\r",
+			"public bool allowTrySnap(Connector s, Connector a) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: allowTryAttach(..)": {
+		"prefix": "allowTryAttach",
+		"body": [
+			"/**\r",
+			" * Returns true if the attach 'a' of this snapper is allowed to attach to the snap 's'.\r",
+			" */\r",
+			"public bool allowTryAttach(Connector a, Connector s) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: useCatalogSurface3D()": {
+		"prefix": "useCatalogSurface3D",
+		"body": [
+			"/**\r",
+			" * Use catalog graphics for main data.\r",
+			" * 'false' will use the default, Abstract Office graphics.\r",
+			" */\r",
+			"public bool useCatalogSurface3D() {\r",
+			"    return super();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: useCatalogSurface2D()": {
+		"prefix": "useCatalogSurface2D",
+		"body": [
+			"/**\r",
+			" * Use catalog graphics for main data.\r",
+			" * 'false' will use the default, Abstract Office graphics.\r",
+			" */\r",
+			"public bool useCatalogSurface2D() {\r",
+			"    return super();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: powerInsertPos(..)": {
+		"prefix": "powerInsertPos",
+		"body": [
+			"/**\r",
+			" * Location/position for power component.\r",
+			" */\r",
+			"public point powerInsertPos(str locationKey, KimIntPowerComponent insert) {\r",
+			"    point res();\r",
+			"\r",
+			"    if (insert in KimIntG1Insert) {\r",
+			"        res = (0, -dimension(cKimIntD)/2, 17inch);\r",
+			"        switch (locationKey) {\r",
+			"          case cKimIntLeftInsert: res.x = 0;\r",
+			"          case cKimIntRightInsert: res.x = dimension(cKimIntW);\r",
+			"          default:;\r",
+			"        }\r",
+			"    }\r",
+			"\r",
+			"    if (insert in KimIntG10Insert) {\r",
+			"        res = (0, -dimension(cKimIntD)/2, dimension(cKimIntH));\r",
+			"        switch (locationKey) {\r",
+			"          case cKimIntLeftInsert: res.x = 17.125inch;\r",
+			"          case cKimIntCenterInsert: res.x = 36inch;\r",
+			"          case cKimIntRightInsert: res.x = 54.8125inch;\r",
+			"          default:;\r",
+			"        }\r",
+			"    }\r",
+			"\r",
+			"    return res;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Elevation: Prop Def": {
+		"prefix": "elevation-propdef",
+		"body": [
+			"double cKimIntElev {\r",
+			"    Object get(..) { return that.elevation(); }\r",
+			"    void put(..) {\r",
+			"        that.updateElevation(v.safeDouble);\r",
+			"        that.invalidate();\r",
+			"    }\r",
+			"    Object domain(..) { return that.elevationDomain(); }\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Elevation: Methods": {
+		"prefix": "elevation-methods",
+		"body": [
+			"/***********************************************************************\r",
+			" * Elevation\r",
+			" ***********************************************************************/\r",
+			"\r",
+			"/**\r",
+			" * Elevation domain.\r",
+			" */\r",
+			"extend public SubSet elevationDomain() {\r",
+			"    return DistanceRange(0inch, 60inch);\r",
+			"}\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * Update elevation.\r",
+			" */\r",
+			"extend public void updateElevation(double newElevation) {\r",
+			"    setPos((pos.x, pos.y, floorPos() + newElevation));\r",
+			"}\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * Elevation.\r",
+			" */\r",
+			"extend public double elevation() {\r",
+			"    return pos.z - floorPos();\r",
+			"}\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * Floor position.\r",
+			" */\r",
+			"extend public double floorPos() {\r",
+			"    return spaceVolumeElevation(line(pos, pos + (dimension(cKimIntW), 0, 0)),\r",
+			"                                visible=true,\r",
+			"                                preferActiveSpaceVolumes=true);\r",
+			"}\r",
+			"\r",
+			""
+		],
+		"description": ""
+	},
+	"Add Override: graphicsOffset() + Graphics area comment ": {
+		"prefix": "graphicsOffset-areaComment",
+		"body": [
+			"    /***********************************************************************\r",
+			"    * Graphics\r",
+			"    ***********************************************************************/\r",
+			"    \r",
+			"    /**\r",
+			"    * Graphics offset.\r",
+			"    */\r",
+			"    public point graphicsOffset(str key=cAOMainData) {\r",
+			"        if (key == cAOMainData) {\r",
+			"            return (dimension(cKimIntW)/2, dimension(cKimIntD)/2, 0);\r",
+			"        }\r",
+			"        return super(..);\r",
+			"    }\r",
+			"\r",
+			""
+		],
+		"description": ""
+	},
+	"Add Override: loadFailed": {
+		"prefix": "loadFailed",
+		"body": [
+			"/**\r",
+			" * Load failed.\r",
+			" */\r",
+			"public loadFailedResult loadFailed(ObjectFormatter formatter, LoadFailure failure) {\r",
+			"    if (failure as UninitializedFieldLoadFailure) {\r",
+			"        if (failure.field.name == \"_bracketLeft\") {\r",
+			"            _bracketLeft = cKimIntNo;\r",
+			"            return loadFailedResult.ignore;\r",
+			"        }\r",
+			"        if (failure.field.name == \"_bracketRight\") {\r",
+			"            _bracketRight = cKimIntNo;\r",
+			"            return loadFailedResult.ignore;\r",
+			"        }\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: Order Group Properties": {
+		"prefix": "orderGroupProperties",
+		"body": [
+			"/**\r",
+			" * Order group properties.\r",
+			" */\r",
+			"public void orderGroupProperties(str group, str[] order, CoreProperties properties) {\r",
+			"    if (group == cKimIntDefaultPropGroup) {\r",
+            "        for (o in order) pln(#o);\r",
+			"    }\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: Connected": {
+		"prefix": "connected",
+		"body": [
+			"/**\r",
+			" * Connected.\r",
+			" */\r",
+			"public void connected(Connector c0, Connector c1, bool snapped, bool attached) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: Get 3D": {
+		"prefix": "get3D",
+		"body": [
+			"/**\r",
+			" * Get 3D.\r",
+			" */\r",
+			"public Primitive3D get3D(FetchEnv3D env, PropObj owner=null) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: Get 2D": {
+		"prefix": "get2D",
+		"body": [
+			"/**\r",
+			" * Get 2D.\r",
+			" */\r",
+			"public GInstance get2D(PropObj owner=null) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Set dimension to next closest in domain": {
+		"prefix": "setDimension",
+		"body": [
+			"setDimension(cKimIntW, dimensionDomain(cKimIntW).closest(dimension(cKimIntW)).safeDouble);"
+		],
+		"description": ""
+	},
+	"Add Override: symPivot": {
+		"prefix": "symPivot",
+		"body": [
+			"/**\r",
+			" * Sym pivot.\r",
+			" */\r",
+			"public point symPivot(str nodeId) {\r",
+			"    if (nodeId == cKimIntRootSK) {\r",
+			"        return point0;\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symScale": {
+		"prefix": "symScale",
+		"body": [
+			"/**\r",
+			" * Sym scale.\r",
+			" */\r",
+			"public point symScale(str nodeId) {\r",
+			"    if (nodeId == cKimIntRootSK) {\r",
+			"        return cKimIntNoScale;\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symPosition": {
+		"prefix": "symposition",
+		"body": [
+			"/**\r",
+			" * Sym offset.\r",
+			" */\r",
+			"public point symPosition(str nodeId) {\r",
+			"    if (nodeId == cKimIntRootSK) {\r",
+			"        return point0;\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symRotation": {
+		"prefix": "symrotation",
+		"body": [
+			"/**\r",
+			" * Sym rotation.\r",
+			" */\r",
+			"public orientation symRotation(str nodeId) {\r",
+			"    if (nodeId == cKimIntRootSK) {\r",
+			"        return 0deg;\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symManipulate": {
+		"prefix": "symmanipulate",
+		"body": [
+			"/**\r",
+			" * Sym manipulate.\r",
+			" */\r",
+			"public void symManipulate(SymNode node) {\r",
+			"    super(..);\r",
+			"    if (node.id == cAOMainData) {\r",
+			"    }\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symTransform": {
+		"prefix": "symtransform",
+		"body": [
+			"/**\r",
+			" * Sym transform.\r",
+			" */\r",
+			"public SymTransform symTransform(str nodeId) {\r",
+			"    if (nodeId == cAOMainData) {\r",
+			"        return SymTransform(symPosition(..), symRotation(..), symScale(..), symPivot(..));\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symStaticCacheKey": {
+		"prefix": "symStaticCacheKey",
+		"body": [
+			"/**\r",
+			" * Sym static cache key.\r",
+			" */\r",
+			"public str symStaticCacheKey() {\r",
+			"    StrBuf res(super(..));\r",
+			"    return res.toS();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: symBased": {
+		"prefix": "symBased",
+		"body": [
+			"/**\r",
+			" * Sym based?\r",
+			" */\r",
+			"public bool symBased() { return true; }"
+		],
+		"description": ""
+	},
+	"Add Override: syncData()": {
+		"prefix": "syncData",
+		"body": [
+			"/**\r",
+			" * Reset the DsPData.\r",
+			" */\r",
+			"public void syncData(str dataKey=cAOMainData) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: disableSymCache()": {
+		"prefix": "disableSymCache",
+		"body": [
+			"/**\r",
+			" * Disable sym cache?\r",
+			" */\r",
+			"public bool disableSymCache() { return true; }"
+		],
+		"description": ""
+	},
+	"Add Override: loaded0()": {
+		"prefix": "loaded0",
+		"body": [
+			"/**\r",
+			" * Loaded0.\r",
+			" */\r",
+			"public Object loaded0(ObjectFormatter formatter, LoadFailInfo failInfo) {\r",
+			"    if (kimIntVersionCheck(.., (${1}))) {\r",
+			"        ${2}\r",
+			"    }\r",
+			"return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: loaded1()": {
+		"prefix": "loaded1",
+		"body": [
+			"/**\r",
+			" * Loaded1.\r",
+			" */\r",
+			"public void loaded1(ObjectFormatter formatter, LoadFailInfo failInfo) {\r",
+			"    super(..);\r",
+			"    if (kimIntVersionCheck(.., (${1}))) {\r",
+			"        ${2}\r",
+			"    }\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: props block": {
+		"prefix": "props",
+		"body": [
+			"/**\r",
+			" * Append prop defs.\r",
+			" */\r",
+			"public props : cached=!developMode {\r",
+			"$1 : fieldName=&:$2.name,\r",
+			"    setting=PropInputSetting(label=$3, attributes=cKimIntStandardAttrs) {\r",
+			"        Object  get(..)     { return that.get$4(); }\r",
+			"        void    put(..)     { that.set$4(v.?$5.?v); }\r",
+			"        Object  domain(..)  { return that.$6Domain(); }\r",
+			"}\r",
+			"}"
+		],
+		"description": ""
+	},
+	"skugen partbody partnumberdomain": {
+		"prefix": "skugen-partbody-partnumberdomain",
+		"body": [
+			"/**\r",
+			" * Part body.\r",
+			" */\r",
+			"public void partBody(str[] subPartKeys) {\r",
+			"    subPartKeys << \"IA\";\r",
+			"    subPartKeys << cKimIntArmCapPK;\r",
+			"}\r",
+			"\r",
+			"\r",
+			"/**\r",
+			" * Part number domain.\r",
+			" */\r",
+			"public str[] partNumberDomain(str partKey) {\r",
+			"    switch (partKey) {\r",
+			"      case cKimIntArmCapPK: return [\"\", \"Y\", \"S\"];\r",
+			"      default:;\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}\r",
+			"\r",
+			""
+		],
+		"description": ""
+	},
+	"use custom.kimballinternational.": {
+		"prefix": "use-customkimballinternational",
+		"body": [
+			"use custom.kimballinternational."
+		],
+		"description": ""
+	},
+	"childof": {
+		"prefix": "childof",
+		"body": [
+			"/**\r",
+			" * Is 'this' child a direct child of 'parent'?\r",
+			" */\r",
+			"public bool childOf(Snapper parent) {\r",
+			"    return parent and parent == this.parent;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"appendInvalidation()": {
+		"prefix": "appendInvalidation",
+		"body": [
+			"/**\r",
+			" * Append invalidations.\r",
+			" */\r",
+			"public void appendInvalidation(InvalidList list) {\r",
+			"    super(..);\r",
+			"    if (hasTooManySinks()) {\r",
+			"        list.putWarning(cAltSinkCountWarning, $sinkCountWarning, {Snapper : this});\r",
+			"    }\r",
+			"}"
+		],
+		"description": ""
+	},
+	"kimintinitviewmodes": {
+		"prefix": "kimintinitviewmodes",
+		"body": [
+			"kimIntInitViewModes();"
+		],
+		"description": ""
+	},
+	"shouldGenerateSku": {
+		"prefix": "shouldGenerateSku",
+		"body": [
+			"/**\r",
+			" * Should generate sku?\r",
+			" */\r",
+			"public bool shouldGenerateSku() {\r",
+			"    return false;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: insertAnimation()": {
+		"prefix": "insertAnimation",
+		"body": [
+			"/**\r",
+			" * Insert animation.\r",
+			" */\r",
+			"public Animation insertAnimation(StartInsertAnimationEnv env) {\r",
+			"    return KimIntInsertAnimation(env);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add: Print Parent Classes": {
+		"prefix": "printParentClasses",
+		"body": [
+			"profile.derick_downey.ddd.printParentClasses($1);"
+		],
+		"description": ""
+	},
+	"Add: Print Child Classes": {
+		"prefix": "printChildClasses",
+		"body": [
+			"profile.derick_downey.ddd.printChildClasses($1, 0);"
+		],
+		"description": ""
+	},
+	"Add Override: localBound()": {
+		"prefix": "localBound",
+		"body": [
+			"/**\r",
+			" * Local bound.\r",
+			" */\r",
+			"public box localBound() {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"customkimballinternational": {
+		"prefix": "customkimballinternational",
+		"body": [
+			"custom.kimballinternational."
+		],
+		"description": ""
+	},
+	"Add Override: itemTagDrawPos()": {
+		"prefix": "itemTagDrawPos",
+		"body": [
+			"/**\r",
+			" * Item tag draw position\r",
+			" */\r",
+			"public point itemTagDrawPos(ItemTag tag) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: connectLineAligns": {
+		"prefix": "connectLineAligns",
+		"body": [
+			"/**\r",
+			" * Connect line aligns.\r",
+			" */\r",
+			"public <bool, bool, bool> connectLineAligns(ConnectLine s, Connector c, double t) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: beforeSelection(..)": {
+		"prefix": "beforeSelection",
+		"body": [
+			"/**\r",
+			" * Before selection.\r",
+			" */\r",
+			"public void beforeSelection(Line mouseLine) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: dropped()": {
+		"prefix": "dropped",
+		"body": [
+			"/**\r",
+			" * Dropped.\r",
+			" */\r",
+			"public void dropped() {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: disconnected(..)": {
+		"prefix": "disconnected",
+		"body": [
+			"/**\r",
+			" * The connector 'c0' of this snapper was disconnected from the connector\r",
+			" * 'c1' in another snapper. The 'wasSnapped' and 'wasAttached' booleans \r",
+			" * indicates the connection type.\r",
+			" */\r",
+			"public void disconnected(Connector c0, Connector c1, bool wasSnapped, bool wasAttached) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: endStretch(..)": {
+		"prefix": "endStretch",
+		"body": [
+			"/**\r",
+			" * End stretch, called when stretch is finished.\r",
+			" */\r",
+			"public void endStretch(Connector s) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: userPasted()": {
+		"prefix": "userPasted",
+		"body": [
+			"/**\r",
+			" * This snapper was pasted.\r",
+			" */\r",
+			"public void userPasted() {\r",
+			"    super();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: getAllCutouts()": {
+		"prefix": "getAllCutouts",
+		"body": [
+			"/**\r",
+			" * Get cutouts.\r",
+			" * \r",
+			" * These need to be defined in snapper coordinates.\r",
+			" */\r",
+			"public AShape2D[] getAllCutouts() {\r",
+			"    return super();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: graphicsLayersToRemove(..)": {
+		"prefix": "graphicsLayersToRemove",
+		"body": [
+			"/**\r",
+			" * Graphics layers to remove.\r",
+			" */\r",
+			"public str{} graphicsLayersToRemove() {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: additionalDataCacheKey(..)": {
+		"prefix": "additionalDataCacheKey",
+		"body": [
+			"/**\r",
+			" * Additional data cache key.\r",
+			" */\r",
+			"public str additionalDataCacheKey(str dataKey=cAOMainData) {\r",
+			"    if (dataKey == cAOMainData) {\r",
+			"        return super(..);\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: update()": {
+		"prefix": "update",
+		"body": [
+			"/**\r",
+			" * Update\r",
+			" */\r",
+			"public void update() {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: updateConnectors()": {
+		"prefix": "updateConnectors",
+		"body": [
+			"/**\r",
+			" * Update connectors.\r",
+			" */\r",
+			"public void updateConnectors() {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: tryAdoptAccessory(..)": {
+		"prefix": "tryAdoptAccessory",
+		"body": [
+			"/**\r",
+			" * Try Adopt Accessory.\r",
+			" */\r",
+			"public bool tryAdoptAccessory(KimIntDataSnapper acc, KimIntAccLoc loc) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: localBoundOrigin()": {
+		"prefix": "localBoundOrigin",
+		"body": [
+			"/**\r",
+			" * Local bound origin.\r",
+			" */\r",
+			"public point localBoundOrigin() {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"xapi": {
+		"prefix": "xapi",
+		"body": [
+			"/***********************************************************************\r",
+			" * Xapi\r",
+			" ***********************************************************************/\r",
+			"\r",
+			"/**\r",
+			" * Xapi.\r",
+			" */\r",
+			"public xapi {\r",
+			"    public void symManipulate(SymNode node);\r",
+			"    public (point[]) lockCoreLocations();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Area Comment: Snapping": {
+		"prefix": "*Snapping",
+		"body": [
+			"/***********************************************************************\r",
+			" * Snapping\r",
+			" ***********************************************************************/"
+		],
+		"description": ""
+	},
+	"Add Override: initSnappingBehavior": {
+		"prefix": "initSnappingBehavior",
+		"body": [
+			"/**\r",
+			" * Init Snapping Behavior.\r",
+			" */\r",
+			"public KimIntSeatingSnappingBehavior initSnappingBehavior() {\r",
+			"    return KimIntNoSnapBehavior();\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: customInitFromSkuPart(..)": {
+		"prefix": "customInitFromSkuPart",
+		"body": [
+			"/**\r",
+			" * Custom init from sku part.\r",
+			" */\r",
+			"public bool customInitFromSkuPart(str subPartKey, str v) {\r",
+			"    switch (subPartKey) {\r",
+			"      case cKimIntShapePK: {\r",
+			"          if (v == \"xxx\") {\r",
+			"              _shape = cKimIntRound;\r",
+			"          }\r",
+			"          return true;\r",
+			"      }\r",
+			"      default:;\r",
+			"    }\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"if (kimIntVersionCheck": {
+		"prefix": "kimIntVersionCheck",
+		"body": [
+			"if (kimIntVersionCheck(.., (${1}))) {\r",
+			"    ${2}\r",
+			"}",
+		],
+		"description": ""
+	},
+	"Add Override: getAccessoryEnvs(..)": {
+		"prefix": "getAccessoryEnvs",
+		"body": [
+			"/**\r",
+			" * Get accessory envs.\r",
+			" */\r",
+			"public str->AccEnv getAccessoryEnvs() {\r",
+			"    str->AccEnv res = super(..);\r",
+			"\r",
+			"    EmbEndCapAccessoryEnv endCapEnv(allowReplace=true);\r",
+			"    res.put(endCapEnv.key, endCapEnv);\r",
+			"\r",
+			"    return res;\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: accessorySnapPosition(..)": {
+		"prefix": "accessorySnapPosition",
+		"body": [
+			"/**\r",
+			" * Snap Position. \r",
+			" * This is the point in snapper coordinates that will represent where the support \r",
+			" *   is snapping to when snapping to an AccessoryLocation.\r",
+			" */\r",
+			"public point accessorySnapPosition(AccessoryLocation loc) {\r",
+			"    return (dimension(cKimIntW)/2, dimension(cKimIntD)/2, dimension(cKimIntH));\r",
+			"}"
+		],
+		"description": ""
+	},
+	" sku-generation": {
+		"prefix": "*Sku Generation",
+		"body": [
+			"/***********************************************************************\r",
+			" * SKU Generation\r",
+			" ***********************************************************************/",
+			"$1"
+		],
+		"description": ""
+	},
+	"Add Overrride: nominalDimension(..)": {
+		"prefix": "nominalDimension",
+		"body": [
+			"/**\r",
+			" * Nominal dimension.\r",
+			" */\r",
+			"public double nominalDimension(str id, double value=0) {\r",
+			"    if (value == 0) value = dimension(id);\r",
+			"    return safeDouble(nominalDimensionDomain(id).?closest(value));\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: internalSetDimension(..)": {
+		"prefix": "internalSetDimension",
+		"body": [
+			"/**\r",
+			" * Set dimension. Doesn't trigger user-changed events.\r",
+			" * Return 'true' if change was actually made.\r",
+			" */\r",
+			"public bool internalSetDimension(str id, double value) {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: userPropertyChanged(..)": {
+		"prefix": "userPropertyChanged",
+		"body": [
+			"/**\r",
+			" * User property changed.\r",
+			" */\r",
+			"public void userPropertyChanged(str key, Object current, Object oldValue, CoreProperties properties) {\r",
+			"    super(..);\r",
+			"    if (key.contains(cDsMPDataProp)) {\r",
+			"        \r",
+			"    }\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: beginStretch": {
+		"prefix": "beginstretch",
+		"body": [
+			"/**\r",
+			" * Begin stretch.\r",
+			" */\r",
+			"public void beginStretch(Connector s) {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add Override: mountingPlateLayerNames": {
+		"prefix": "mountingPlateLayerNames",
+		"body": [
+			"/**\r",
+			" * Mounting-plate layer names.\r",
+			" */\r",
+			"public str{} mountingPlateLayerNames() {\r",
+			"    return super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"Add override: genericInvalidate(..)": {
+		"prefix": "genericinvalidate",
+		"body": [
+			"/**\r",
+			" * Generic invalidate.\r",
+			" */\r",
+			"public void genericInvalidate() {\r",
+			"    super(..);\r",
+			"}"
+		],
+		"description": ""
+	},
+	"schemekey": {
+		"prefix": "schemekey",
+		"body": [
+			"    /**\r",
+			"    * Scheme key.\r",
+			"    */\r",
+			"   extend public str schemeKey(str dataKey=cAOMainData) {\r",
+			"if (?KimIntDsPData data = getData(..)) {\r",
+			"    return data.schemeKey();\r",
+			"}\r",
+			"return null;\r",
+			"   }"
+		],
+		"description": ""
+	},
+	"Quick Delivery Library Limb": {
+	"prefix": "",
+	"body": [
+		"/**",
+		" * Quick delivery.",
+		" */",
+		"public void polyKIMINTSeatingQdCatLimb(LibraryLimb root, str key) {",
+		"    LibraryLimb parent(root, pkg, key, label=$poly);",
+		"    SnapperLimb(parent, pkg, \"PolyLoungeQD\", image=polyIcon(\"PolyLounge\"), toolTipText=qdToolTipText($PolyLoungeTip));",
+		"}",
+		""
+	],
+	"description": "Quick Delivery Library Limb"
+	},
+
+	"Add Override: Catalog": {
+		"prefix": "derick-catalog",
+	"body": [
+		"/**",
+		" * Catalog per key.",
+		" */",
+		"public str catalog(str dataKey)  {",
+		"    return dataKey == cAOMainData ? cKimIntQdCatCode : super(..);",
+		"}"
+	],
+	"description": "Add Override: Catalog"
+	},
+
+	"Add Override: LoadFailed": {
+		"prefix": "derick-loadfailed",
+	"body": [
+		"/**",
+		" * Load failed.",
+		" */",
+		"public loadFailedResult loadFailed(ObjectFormatter formatter, LoadFailure failure) {",
+		"    if (failure as UninitializedFieldLoadFailure) {",
+		"        if (failure.field.name == \"qdChairType\") {",
+		"            qdChairType = cHlQdBlackMesh;",
+		"            return loadFailedResult.ignore;",
+		"        }",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: loadFailed(..)"
+	},
+
+	"Object domain(..)": {
+		"prefix": "derick-object-domain",
+	"body": [
+		"Object domain(..) { return that.packDomain(); }"
+	],
+	"description": "Object domain(..)"
+	},
+
+	"addToQdLib": {
+		"prefix": "derick-addtoqdlib",
+	"body": [
+		"addToQdLib(cProductName, [_seatingQdCat], cKIMINTBrand, [cKimIntQdCatCode], #:package);"
+	],
+	"description": "addToQdLib"
+	},
+
+	"Add Override: Quick Delivery Basics": {
+		"prefix": "derick-quick-delivery-basics",
+	"body": [
+		"    /***********************************************************************",
+		"     * Data",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Catalog.",
+		"     */",
+		"    public str catalog(str dataKey) {",
+		"        return dataKey == cAOMainData ? cKimIntQdCatCode : super(..);",
+		"    }",
+		"",
+		"",
+		"    /***********************************************************************",
+		"     * Parts",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Part number.",
+		"     */",
+		"    public str partNumber(str dataKey=cAOMainData) {",
+		"        return dataKey == cAOMainData ? \"Q\" # super(..) : super(..);",
+		"    }"
+	],
+	"description": "Add Override: Quick Delivery Basics"
+	},
+
+	"Add Override: Quick Delivery Basics (No dataKey)": {
+		"prefix": "derick-quick-delivery-basics-no-datakey",
+	"body": [
+		"    /***********************************************************************",
+		"     * Data",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Catalog.",
+		"     */",
+		"    public str catalog(str dataKey) {",
+		"        return cKimIntQdCatCode;",
+		"    }",
+		"",
+		"",
+		"    /***********************************************************************",
+		"     * Parts",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Part number.",
+		"     */",
+		"    public str partNumber(str dataKey=cAOMainData) {",
+		"        return \"Q\" # super(..);",
+		"    }"
+	],
+	"description": "Add Override: Quick Delivery Basics (No dataKey)"
+	},
+
+	"Add Override: Early Initialize": {
+		"prefix": "derick-early-initialize",
+	"body": [
+		"/**",
+		" * Early initialize.",
+		" */",
+		"public void earlyInitialize() {",
+		"    super(..);",
+		"}"
+	],
+	"description": "Add Override: Early Initialize"
+	},
+
+	"Add Override: Late Initialize": {
+		"prefix": "derick-late-initialize",
+	"body": [
+		"/**",
+		" * Late initialize.",
+		" */",
+		"public void lateInitialize() {",
+		"    super(..);",
+		"}",
+		""
+	],
+	"description": "Add Override: Late Initialize"
+	},
+
+	"Add Override: Append Prop Defs": {
+		"prefix": "derick-append-prop-defs",
+	"body": [
+		"/**",
+		" * Append prop defs.",
+		" */",
+		"public props : cached=!developMode {",
+		"cProductPK : fieldName=\"_\", domain=Domain(),",
+		"setting=PropInputSetting(label=$,",
+		"        attributes={cKimIntQuickAttr, cKimIntInsertAttr, cKimIntPersistentAttr}) {",
+		"        Object get(..) { return that.get(); }",
+		"        void put(..) { if (v as Symbol) that.set(v.?v); return; }",
+		"}",
+		"}"
+	],
+	"description": "Add Override: Append Prop Defs"
+	},
+
+	"Add SkuGen Override: Late Init From Sku Parts": {
+		"prefix": "derick-late-init-from-sku-parts",
+	"body": [
+		"/**",
+		" * Late init from sku parts.",
+		" * Do these last because they rely on other props for their domain.",
+		" */",
+		"public str[] lateInitFromSkuParts() {",
+		"    return [cKimIntD, cKimIntW, cKimIntH];",
+		"}"
+	],
+	"description": "Add SkuGen Override: Late Init From Sku Parts"
+	},
+
+	"Enable Deprecated Errors (False)": {
+		"prefix": "derick-enable-deprecated-errors-false",
+	"body": [
+		"cm.runtime.enableDeprecatedErrors(false);"
+	],
+	"description": "Enable Deprecated Errors (False)"
+	},
+
+	"Add Override: Nominal Width Domain": {
+	"prefix": "",
+	"body": [
+		"/**",
+		" * Nominal width domain.",
+		" */",
+		"public SubSet nomWidthDomain() {",
+		"    return DoubleEnum([]);",
+		"}"
+	],
+	"description": "Add Override: Nominal Width Domain"
+	},
+
+	"Add Override: Nominal Depth Domain": {
+		"prefix": "derick-nominal-depth-domain",
+	"body": [
+		"/**",
+		" * Nominal depth domain.",
+		" */",
+		"public SubSet nomDepthDomain() {",
+		"    return DoubleEnum([]);",
+		"}"
+	],
+	"description": "Add Override: Nominal Depth Domain"
+	},
+
+	"Add Override: Nominal Height Domain": {
+		"prefix": "derick-nominal-height-domain",
+	"body": [
+		"/**",
+		" * Nominal height domain.",
+		" */",
+		"public SubSet nomHeightDomain() {",
+		"    return DoubleEnum([]);",
+		"}"
+	],
+	"description": "Add Override: Nominal Height Domain"
+	},
+
+	"Add Override: Part Number": {
+		"prefix": "derick-part-number",
+	"body": [
+		"/**",
+		" * Part number.",
+		" */",
+		"public str partNumber(str dataKey=cAOMainData) {",
+		"    if (dataKey == cAOMainData) {",
+		"        StrBuf res(cPrefixPN);",
+		"        return res.toS();",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: Part Number"
+	},
+	
+	"Add SkuGen Override: Custom Init From Sku Part": {
+		"prefix": "derick-custom-init-from-sku-part",
+	"body": [
+		"/**",
+		" * Custom init from sku part.",
+		" */",
+		"public bool customInitFromSkuPart(str partKey, str v) {",
+		"    switch (partKey) {",
+		"      case cPairSeatCountPart: {",
+		"          if (v == \"1\") internalSetDimension(cKimIntW, 27inch);",
+		"          else if (v == \"2\") internalSetDimension(cKimIntW, 54inch);",
+		"          else if (v == \"3\") internalSetDimension(cKimIntW, 81inch);",
+		"          return true;",
+		"      }",
+		"      default:;",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add SkuGen Override: Custom Init From Sku Part"
+	},
+
+	"Add SkuGen Override: Part Number Domain": {
+		"prefix": "derick-part-number-domain",
+	"body": [
+		"/**",
+		" * Part number domain.",
+		" */",
+		"public StrSubSet partNumberDomain(str partKey) {",
+		"    switch (partKey) {",
+		"      case cAusSeatNumPartKey: return StrSubSet([\"2\", \"3\"]);",
+		"      default:;",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: Part Number Domain"
+	},
+
+	"Add SkuGen Override: Part Prefix": {
+		"prefix": "derick-part-prefix",
+
+		"body": [
+			"/**",
+			" * Part prefix.",
+			" */",
+			"public str partPrefix(str dataKey=cAOMainData) {",
+			"    return \"KA3\";",
+			"}"
+		],
+		"description": "Add Override: Part Prefix"
+	},
+
+	"Add SkuGen Override: Part Body": {
+		"prefix": "derick-part-body",
+	"body": [
+		"/**",
+		" * Part body.",
+		" */",
+		"public void partBody(str[] subPartKeys) {",
+		"    subPartKeys << \"BE\";",
+		"    subPartKeys << cAusSeatNumPartKey;",
+		"}"
+	],
+	"description": "Add Override: Part Body"
+	},
+
+	"Add SkuGen Override: Part Body and Domain": {
+		"prefix": "derick-part-body-and-domain",
+	"body": [
+		"/**",
+		" * Part body.",
+		" */",
+		"public void partBody(str[] subPartKeys) {",
+		"    subPartKeys << \"BE\";",
+		"    subPartKeys << cAusSeatNumPartKey;",
+		"}",
+		"",
+		"",
+		"/**",
+		" * Part number domain.",
+		" */",
+		"public StrSubSet partNumberDomain(str partKey) {",
+		"    switch (partKey) {",
+		"      case cAusSeatNumPartKey: return StrSubSet([\"2\", \"3\"]);",
+		"      default:;",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: Part Prefix & Body"
+	},
+
+	"Add: Print Line Hit": {
+		"prefix": "derick-print-line-hit",
+	"body": [
+        "pln(spnn(\"\\n\" # ${TM_LINE_NUMBER} # \" - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").ehb${1:pink} # \" \");pln(cm.basic.popFace());",
+		""
+        // "pln(spnn(${TM_LINE_NUMBER} # \"PRINT LINE HIT - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").eAngry);"
+		//   "pln(spnn(#:function.name, \"(..) - Line $TM_LINE_NUMBER - ${TM_FILENAME} - \", #:package, \" --- PRINT LINE HIT!!!\").eAngry);",
+		//   "pln(spnn(\"PRINT LINE HIT!!! --- \", #:package, \" - ${TM_FILENAME} - \", #:function.name, \"(..) - line $TM_LINE_NUMBER\").eAngry);",
+		],
+		"description": "Print line for testing whether a line is hit"
+	},
+	
+	"Add: Dev Print Line Hit": {
+		"prefix": "derick-dev-print-line-hit",
+		"body": [
+		  "if (dbg_grom) pln(#:function.name, \"(..) - ${TM_FILENAME} --- \");",
+		],
+		"description": "Print line for testing whether a line is hit"
+	  },
+	
+	"Add: Xtrace": {
+		"prefix": "derick-xtrace",
+		"body": [
+		  "bool xtrace = dbg_grom;",
+		],
+		"description": "Print line for testing whether a line is hit"
+	  },
+	
+	"Add Override: isVisible": {
+		"prefix": "derick-isvisible",
+	"body": [
+		"/**",
+		" * Return true if the connector 'c' in this snapper should be visible.",
+		" */",
+		"public bool isVisible(Connector c) {",
+		"    return super(..);",
+		"}",
+		""
+	],
+	"description": "Add isVisible(Connector c) override from Snapper"
+	},
+
+	"Add Override: Graphics Rotation": {
+		"prefix": "derick-graphics-rotation",
+
+		"body": [
+		  "/**",
+		  " * Graphics rotation.",
+		  " */",
+		  "public orientation graphicsRot(str key=cAOMainData) {",
+		  "    if (key == cAOMainData) {",
+		  "        return ${1:180deg};",
+		  "    }",
+		  "    return super(..);",
+		  "}",
+		  ""
+		],
+		"description": "Add graphics offset override used in KimInt classes"
+	  },
+	
+	"Add Override: Graphics Offset": {
+		"prefix": "derick-graphics-offset",
+
+		"body": [
+			"/**",
+			" * Graphics offset.",
+			" */",
+			"public point graphicsOffset(str key=cAOMainData) {",
+			"    if (key == cAOMainData) {",
+			"        return ${1:(dimension(cKimIntW)/2, dimension(cKimIntD)/2, 0)};",
+			"    }",
+			"    return super(..);",
+			"}"
+		  ],
+		"description": "Add graphics offset override used in KimInt classes"
+	  },
+
+	"Disable Deprecated Errors": {
+		"prefix": "derick-disable-deprecated-errors",
+
+		"body": [
+		  "enableDeprecatedErrors(false);",
+		],
+		"description": "Disable deprecated errors"
+	  },
+
+	  "Add Override: Loaded0": {
+		"prefix": "derick-loaded0-2",
+
+		"body": [
+		  "/**",
+		  " * Loaded0.",
+		  " */",
+		  "public Object loaded0(ObjectFormatter formatter, LoadFailInfo failInfo) {",
+		  "    if (pkgVersion(#:package, formatter) < version(${1:14, 6, 1})) {",
+		  "        $2",
+		  "    }",
+		  "    return super(..);",
+		  "}",
+		  "",
+		],
+		"description": "Add Loaded0 override"
+	  },
+
+	  "Add Override: Loaded1": {
+		"prefix": "derick-loaded1-2",
+
+		"body": [
+		  "/**",
+		  " * Loaded1.",
+		  " */",
+		  "public void loaded1(ObjectFormatter formatter, LoadFailInfo failInfo) {",
+		  "    super(..);",
+		  "    if (pkgVersion(#:package, formatter) < version(${1:14, 6, 1})) {",
+		  "        $2",
+		  "    }",
+		  "}",
+		  "",
+		],
+		"description": "Add Loaded1 override"
+	  },
+
+	"New CM File": {
+		"prefix": "derick-new-cm-file",
+		"body": [
+			"/** Configura CET Source Copyright Notice (CETSC)",
+			"",
+			"   This file contains Configura CM source code and is part of the",
+			"   Configura CET Development Platform (CETDEV). Configura CM",
+			"   is a programming language created by Configura Sverige AB.",
+			"   Configura, Configura CET and Configura CM are trademarks of",
+			"   Configura Sverige AB. Configura Sverige AB owns Configura CET,",
+			"   Configura CM, and CETDEV.",
+			"",
+			"   Copyright (C) 2004 Configura Sverige AB, All rights reserved.",
+			"",
+			"   You can modify this source file under the terms of the Configura CET",
+			"   Source Licence Agreement (CETSL) as published by Configura Sverige AB.",
+			"",
+			"   Configura Sverige AB has exclusive rights to all changes, modifications,",
+			"   and corrections of this source file. Configura Sverige AB has exclusive",
+			"   rights to any new source file containing material from this source file.",
+			"   A new source file based on this source file or containing material from",
+			"   this source file has to include this Configura CET Source Copyright Notice",
+			"   in its full content. All changes, modifications, and corrections mentioned",
+			"   above shall be reported to Configura Sverige AB within One Month from",
+			"   the date that the modification occurred.",
+			"",
+			"   Configura CM is distributed in the hope that it will be useful, but",
+			"   WITHOUT ANY WARRANTY; without even the implied warranty of",
+			"   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+			"   See the CETSL for more details.",
+			"",
+			"   You should have received a copy of the CETSL along with the CETDEV.",
+			"   If not, write to Configura Sverige AB, Box 306, SE-581 02 Linköping, Sweden.",
+			"   Tel +46 13377800, Fax +46 13377855,",
+			"   Email: info@configura.com, www.configura.com",
+			"",
+			"   END OF CETSC",
+			"*/",
+			"package custom.kimballinternational.$1;",
+			""
+		],
+		"description": "Add generic header content to the top of a new CM file"
+	},
+	
+	"Bash: KimInt Directory": {
+		"prefix": "derick-kimint-directory",
+		"body": [
+			"cd extensions/custom/kimballinternational",
+		  ],
+		"description": "Change directory to kimballinternational"
+	},
+
+	"Add: Comment": {
+		"prefix": "derick-comment",
+		"body": [
+			"/**",
+			" * ${1:${TM_SELECTED_TEXT}}",
+			" */",
+			"",
+		  ],
+		"description": "Creates a descriptive comment block"
+	},
+
+	"Add: Area Comment": {
+		"prefix": "derick-area-comment",
+		"body": [
+			"/***********************************************************************",
+			" * ${1:${TM_SELECTED_TEXT}}",
+			" ***********************************************************************/",
+			"",
+			"",
+		],
+		"description": "Creates a section/header comment block"
+	},
+
+	"Add: pln()": {
+		"prefix": "derick-pln",
+		"scope": "configura-cm",
+		"body": [
+			"pln(#${1:${TM_SELECTED_TEXT}});",
+		  ],
+		"description": "Creates a descriptive comment block"
+	},
+
+	
+	"Add: Append/Remove Attributes to Dimensions": {
+		"prefix": "derick-append-remove-attributes-to-dimensions",
+		"scope": "configura-cm",
+		"body": [
+			"construct {",
+			"    if (PropDef def = propDefs.get(cKimIntW)) {",
+			"        def.setting.?PropInputSetting.?attributes += {cKimIntQuickAttr, cKimIntPersistentAttr};",
+			"        def.setting.?PropInputSetting.?attributes.remove(cKimIntLockableAttr);",
+			"    }",
+			"}"
+		],
+		"description": "Appends and removes attributes to dimensions"
+	},
+
+	"Add: RS Entry": {
+		"prefix": "derick-rs-entry",
+		"body": [
+		  "$${1} {",
+		  "    english \"${2}\";",
+		  "}",
+		  "${3}",
+		],
+		"description": "Creates an RS entry"
+	  },
+	"Inspect Class Hierarchy": {
+		"prefix": "derick-inspect-class-hierarchy",
+		"body": [
+			"cm.runtime.console.showClassViewerDummy($1);"
+		],
+	},
+	"Quick Delivery Library Limb": {
+	"prefix": "",
+	"body": [
+		"/**",
+		" * Quick delivery.",
+		" */",
+		"public void polyKIMINTSeatingQdCatLimb(LibraryLimb root, str key) {",
+		"    LibraryLimb parent(root, pkg, key, label=$poly);",
+		"    SnapperLimb(parent, pkg, \"PolyLoungeQD\", image=polyIcon(\"PolyLounge\"), toolTipText=qdToolTipText($PolyLoungeTip));",
+		"}",
+		""
+	],
+	"description": "Quick Delivery Library Limb"
+	},
+
+	"Add Override: Catalog": {
+		"prefix": "derick-catalog",
+	"body": [
+		"/**",
+		" * Catalog per key.",
+		" */",
+		"public str catalog(str dataKey)  {",
+		"    return dataKey == cAOMainData ? cKimIntQdCatCode : super(..);",
+		"}"
+	],
+	"description": "Add Override: Catalog"
+	},
+
+	"Add Override: LoadFailed": {
+		"prefix": "derick-loadfailed",
+	"body": [
+		"/**",
+		" * Load failed.",
+		" */",
+		"public loadFailedResult loadFailed(ObjectFormatter formatter, LoadFailure failure) {",
+		"    if (failure as UninitializedFieldLoadFailure) {",
+		"        if (failure.field.name == \"qdChairType\") {",
+		"            qdChairType = cHlQdBlackMesh;",
+		"            return loadFailedResult.ignore;",
+		"        }",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: loadFailed(..)"
+	},
+
+	"Object domain(..)": {
+		"prefix": "derick-object-domain",
+	"body": [
+		"Object domain(..) { return that.packDomain(); }"
+	],
+	"description": "Object domain(..)"
+	},
+
+	"addToQdLib": {
+		"prefix": "derick-addtoqdlib",
+	"body": [
+		"addToQdLib(cProductName, [_seatingQdCat], cKIMINTBrand, [cKimIntQdCatCode], #:package);"
+	],
+	"description": "addToQdLib"
+	},
+
+	"Add Override: Quick Delivery Basics": {
+		"prefix": "derick-quick-delivery-basics",
+	"body": [
+		"    /***********************************************************************",
+		"     * Data",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Catalog.",
+		"     */",
+		"    public str catalog(str dataKey) {",
+		"        return dataKey == cAOMainData ? cKimIntQdCatCode : super(..);",
+		"    }",
+		"",
+		"",
+		"    /***********************************************************************",
+		"     * Parts",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Part number.",
+		"     */",
+		"    public str partNumber(str dataKey=cAOMainData) {",
+		"        return dataKey == cAOMainData ? \"Q\" # super(..) : super(..);",
+		"    }"
+	],
+	"description": "Add Override: Quick Delivery Basics"
+	},
+
+	"Add Override: Quick Delivery Basics (No dataKey)": {
+		"prefix": "derick-quick-delivery-basics-no-datakey",
+	"body": [
+		"    /***********************************************************************",
+		"     * Data",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Catalog.",
+		"     */",
+		"    public str catalog(str dataKey) {",
+		"        return cKimIntQdCatCode;",
+		"    }",
+		"",
+		"",
+		"    /***********************************************************************",
+		"     * Parts",
+		"     ***********************************************************************/",
+		"",
+		"    /**",
+		"     * Part number.",
+		"     */",
+		"    public str partNumber(str dataKey=cAOMainData) {",
+		"        return \"Q\" # super(..);",
+		"    }"
+	],
+	"description": "Add Override: Quick Delivery Basics (No dataKey)"
+	},
+
+	"Add Override: Early Initialize": {
+		"prefix": "derick-early-initialize",
+	"body": [
+		"/**",
+		" * Early initialize.",
+		" */",
+		"public void earlyInitialize() {",
+		"    super(..);",
+		"}"
+	],
+	"description": "Add Override: Early Initialize"
+	},
+
+	"Add Override: Late Initialize": {
+		"prefix": "derick-late-initialize",
+	"body": [
+		"/**",
+		" * Late initialize.",
+		" */",
+		"public void lateInitialize() {",
+		"    super(..);",
+		"}",
+		""
+	],
+	"description": "Add Override: Late Initialize"
+	},
+
+	"Add Override: Append Prop Defs": {
+		"prefix": "derick-append-prop-defs",
+	"body": [
+		"/**",
+		" * Append prop defs.",
+		" */",
+		"public props : cached=!developMode {",
+		"cProductPK : fieldName=\"_\", domain=Domain(),",
+		"setting=PropInputSetting(label=$,",
+		"        attributes={cKimIntQuickAttr, cKimIntInsertAttr, cKimIntPersistentAttr}) {",
+		"        Object get(..) { return that.get(); }",
+		"        void put(..) { if (v as Symbol) that.set(v.?v); return; }",
+		"}",
+		"}"
+	],
+	"description": "Add Override: Append Prop Defs"
+	},
+
+	"Add SkuGen Override: Late Init From Sku Parts": {
+		"prefix": "derick-late-init-from-sku-parts",
+	"body": [
+		"/**",
+		" * Late init from sku parts.",
+		" * Do these last because they rely on other props for their domain.",
+		" */",
+		"public str[] lateInitFromSkuParts() {",
+		"    return [cKimIntD, cKimIntW, cKimIntH];",
+		"}"
+	],
+	"description": "Add SkuGen Override: Late Init From Sku Parts"
+	},
+
+	"Enable Deprecated Errors (False)": {
+		"prefix": "derick-enable-deprecated-errors-false",
+	"body": [
+		"cm.runtime.enableDeprecatedErrors(false);"
+	],
+	"description": "Enable Deprecated Errors (False)"
+	},
+
+	"Add Override: Nominal Width Domain": {
+	"prefix": "",
+	"body": [
+		"/**",
+		" * Nominal width domain.",
+		" */",
+		"public SubSet nomWidthDomain() {",
+		"    return DoubleEnum([]);",
+		"}"
+	],
+	"description": "Add Override: Nominal Width Domain"
+	},
+
+	"Add Override: Nominal Depth Domain": {
+		"prefix": "derick-nominal-depth-domain",
+	"body": [
+		"/**",
+		" * Nominal depth domain.",
+		" */",
+		"public SubSet nomDepthDomain() {",
+		"    return DoubleEnum([]);",
+		"}"
+	],
+	"description": "Add Override: Nominal Depth Domain"
+	},
+
+	"Add Override: Nominal Height Domain": {
+		"prefix": "derick-nominal-height-domain",
+	"body": [
+		"/**",
+		" * Nominal height domain.",
+		" */",
+		"public SubSet nomHeightDomain() {",
+		"    return DoubleEnum([]);",
+		"}"
+	],
+	"description": "Add Override: Nominal Height Domain"
+	},
+
+	"Add Override: Part Number": {
+		"prefix": "derick-part-number",
+	"body": [
+		"/**",
+		" * Part number.",
+		" */",
+		"public str partNumber(str dataKey=cAOMainData) {",
+		"    if (dataKey == cAOMainData) {",
+		"        StrBuf res(cPrefixPN);",
+		"        return res.toS();",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: Part Number"
+	},
+	
+	"Add SkuGen Override: Custom Init From Sku Part": {
+		"prefix": "derick-custom-init-from-sku-part",
+	"body": [
+		"/**",
+		" * Custom init from sku part.",
+		" */",
+		"public bool customInitFromSkuPart(str partKey, str v) {",
+		"    switch (partKey) {",
+		"      case cPairSeatCountPart: {",
+		"          if (v == \"1\") internalSetDimension(cKimIntW, 27inch);",
+		"          else if (v == \"2\") internalSetDimension(cKimIntW, 54inch);",
+		"          else if (v == \"3\") internalSetDimension(cKimIntW, 81inch);",
+		"          return true;",
+		"      }",
+		"      default:;",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add SkuGen Override: Custom Init From Sku Part"
+	},
+
+	"Add SkuGen Override: Part Number Domain": {
+		"prefix": "derick-part-number-domain",
+	"body": [
+		"/**",
+		" * Part number domain.",
+		" */",
+		"public StrSubSet partNumberDomain(str partKey) {",
+		"    switch (partKey) {",
+		"      case cAusSeatNumPartKey: return StrSubSet([\"2\", \"3\"]);",
+		"      default:;",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: Part Number Domain"
+	},
+
+	"Add SkuGen Override: Part Prefix": {
+		"prefix": "derick-part-prefix",
+
+		"body": [
+			"/**",
+			" * Part prefix.",
+			" */",
+			"public str partPrefix(str dataKey=cAOMainData) {",
+			"    return \"KA3\";",
+			"}"
+		],
+		"description": "Add Override: Part Prefix"
+	},
+
+	"Add SkuGen Override: Part Body": {
+		"prefix": "derick-part-body",
+	"body": [
+		"/**",
+		" * Part body.",
+		" */",
+		"public void partBody(str[] subPartKeys) {",
+		"    subPartKeys << \"BE\";",
+		"    subPartKeys << cAusSeatNumPartKey;",
+		"}"
+	],
+	"description": "Add Override: Part Body"
+	},
+
+	"Add SkuGen Override: Part Body and Domain": {
+		"prefix": "derick-part-body-and-domain",
+	"body": [
+		"/**",
+		" * Part body.",
+		" */",
+		"public void partBody(str[] subPartKeys) {",
+		"    subPartKeys << \"BE\";",
+		"    subPartKeys << cAusSeatNumPartKey;",
+		"}",
+		"",
+		"",
+		"/**",
+		" * Part number domain.",
+		" */",
+		"public StrSubSet partNumberDomain(str partKey) {",
+		"    switch (partKey) {",
+		"      case cAusSeatNumPartKey: return StrSubSet([\"2\", \"3\"]);",
+		"      default:;",
+		"    }",
+		"    return super(..);",
+		"}"
+	],
+	"description": "Add Override: Part Prefix & Body"
+	},
+
+	"Add: Print Line Hit": {
+		"prefix": "derick-print-line-hit",
+	"body": [
+        "pln(spnn(\"\\n\" # ${TM_LINE_NUMBER} # \" - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").ehb${1:pink} # \" \");pln(cm.basic.popFace());",
+		""
+        // "pln(spnn(${TM_LINE_NUMBER} # \"PRINT LINE HIT - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").eAngry);"
+		//   "pln(spnn(#:function.name, \"(..) - Line $TM_LINE_NUMBER - ${TM_FILENAME} - \", #:package, \" --- PRINT LINE HIT!!!\").eAngry);",
+		//   "pln(spnn(\"PRINT LINE HIT!!! --- \", #:package, \" - ${TM_FILENAME} - \", #:function.name, \"(..) - line $TM_LINE_NUMBER\").eAngry);",
+		],
+		"description": "Print line for testing whether a line is hit"
+	},
+	
+	"Add: Dev Print Line Hit": {
+		"prefix": "derick-dev-print-line-hit",
+		"body": [
+		  "if (dbg_grom) pln(#:function.name, \"(..) - ${TM_FILENAME} --- \");",
+		],
+		"description": "Print line for testing whether a line is hit"
+	  },
+	
+	"Add: Xtrace": {
+		"prefix": "derick-xtrace",
+		"body": [
+		  "bool xtrace = dbg_grom;",
+		],
+		"description": "Print line for testing whether a line is hit"
+	  },
+	
+	"Add Override: isVisible": {
+		"prefix": "derick-isvisible",
+	"body": [
+		"/**",
+		" * Return true if the connector 'c' in this snapper should be visible.",
+		" */",
+		"public bool isVisible(Connector c) {",
+		"    return super(..);",
+		"}",
+		""
+	],
+	"description": "Add isVisible(Connector c) override from Snapper"
+	},
+
+	"Add Override: Graphics Rotation": {
+		"prefix": "derick-graphics-rotation",
+
+		"body": [
+		  "/**",
+		  " * Graphics rotation.",
+		  " */",
+		  "public orientation graphicsRot(str key=cAOMainData) {",
+		  "    if (key == cAOMainData) {",
+		  "        return ${1:180deg};",
+		  "    }",
+		  "    return super(..);",
+		  "}",
+		  ""
+		],
+		"description": "Add graphics offset override used in KimInt classes"
+	  },
+	
+	"Add Override: Graphics Offset": {
+		"prefix": "derick-graphics-offset",
+
+		"body": [
+			"/**",
+			" * Graphics offset.",
+			" */",
+			"public point graphicsOffset(str key=cAOMainData) {",
+			"    if (key == cAOMainData) {",
+			"        return ${1:(dimension(cKimIntW)/2, dimension(cKimIntD)/2, 0)};",
+			"    }",
+			"    return super(..);",
+			"}"
+		  ],
+		"description": "Add graphics offset override used in KimInt classes"
+	  },
+
+	"Disable Deprecated Errors": {
+		"prefix": "derick-disable-deprecated-errors",
+
+		"body": [
+		  "enableDeprecatedErrors(false);",
+		],
+		"description": "Disable deprecated errors"
+	  },
+
+	  "Add Override: Loaded0": {
+		"prefix": "derick-loaded0-2",
+
+		"body": [
+		  "/**",
+		  " * Loaded0.",
+		  " */",
+		  "public Object loaded0(ObjectFormatter formatter, LoadFailInfo failInfo) {",
+		  "    if (pkgVersion(#:package, formatter) < version(${1:14, 6, 1})) {",
+		  "        $2",
+		  "    }",
+		  "    return super(..);",
+		  "}",
+		  "",
+		],
+		"description": "Add Loaded0 override"
+	  },
+
+	  "Add Override: Loaded1": {
+		"prefix": "derick-loaded1-2",
+
+		"body": [
+		  "/**",
+		  " * Loaded1.",
+		  " */",
+		  "public void loaded1(ObjectFormatter formatter, LoadFailInfo failInfo) {",
+		  "    super(..);",
+		  "    if (pkgVersion(#:package, formatter) < version(${1:14, 6, 1})) {",
+		  "        $2",
+		  "    }",
+		  "}",
+		  "",
+		],
+		"description": "Add Loaded1 override"
+	  },
+
+	"New CM File": {
+		"prefix": "derick-new-cm-file",
+		"body": [
+			"/** Configura CET Source Copyright Notice (CETSC)",
+			"",
+			"   This file contains Configura CM source code and is part of the",
+			"   Configura CET Development Platform (CETDEV). Configura CM",
+			"   is a programming language created by Configura Sverige AB.",
+			"   Configura, Configura CET and Configura CM are trademarks of",
+			"   Configura Sverige AB. Configura Sverige AB owns Configura CET,",
+			"   Configura CM, and CETDEV.",
+			"",
+			"   Copyright (C) 2004 Configura Sverige AB, All rights reserved.",
+			"",
+			"   You can modify this source file under the terms of the Configura CET",
+			"   Source Licence Agreement (CETSL) as published by Configura Sverige AB.",
+			"",
+			"   Configura Sverige AB has exclusive rights to all changes, modifications,",
+			"   and corrections of this source file. Configura Sverige AB has exclusive",
+			"   rights to any new source file containing material from this source file.",
+			"   A new source file based on this source file or containing material from",
+			"   this source file has to include this Configura CET Source Copyright Notice",
+			"   in its full content. All changes, modifications, and corrections mentioned",
+			"   above shall be reported to Configura Sverige AB within One Month from",
+			"   the date that the modification occurred.",
+			"",
+			"   Configura CM is distributed in the hope that it will be useful, but",
+			"   WITHOUT ANY WARRANTY; without even the implied warranty of",
+			"   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+			"   See the CETSL for more details.",
+			"",
+			"   You should have received a copy of the CETSL along with the CETDEV.",
+			"   If not, write to Configura Sverige AB, Box 306, SE-581 02 Linköping, Sweden.",
+			"   Tel +46 13377800, Fax +46 13377855,",
+			"   Email: info@configura.com, www.configura.com",
+			"",
+			"   END OF CETSC",
+			"*/",
+			"package custom.kimballinternational.$1;",
+			""
+		],
+		"description": "Add generic header content to the top of a new CM file"
+	},
+	
+	"Bash: KimInt Directory": {
+		"prefix": "derick-kimint-directory",
+		"body": [
+			"cd extensions/custom/kimballinternational",
+		  ],
+		"description": "Change directory to kimballinternational"
+	},
+
+	"Add: Comment": {
+		"prefix": "derick-comment",
+		"body": [
+			"/**",
+			" * ${1:${TM_SELECTED_TEXT}}",
+			" */",
+			"",
+		  ],
+		"description": "Creates a descriptive comment block"
+	},
+
+	"Add: Area Comment": {
+		"prefix": "derick-area-comment",
+		"body": [
+			"/***********************************************************************",
+			" * ${1:${TM_SELECTED_TEXT}}",
+			" ***********************************************************************/",
+			"",
+			"",
+		],
+		"description": "Creates a section/header comment block"
+	},
+
+	"Add: pln()": {
+		"prefix": "derick-pln",
+		"scope": "configura-cm",
+		"body": [
+			"pln(#${1:${TM_SELECTED_TEXT}});",
+		  ],
+		"description": "Creates a descriptive comment block"
+	},
+
+	
+	"Add: Append/Remove Attributes to Dimensions": {
+		"prefix": "derick-append-remove-attributes-to-dimensions",
+		"scope": "configura-cm",
+		"body": [
+			"construct {",
+			"    if (PropDef def = propDefs.get(cKimIntW)) {",
+			"        def.setting.?PropInputSetting.?attributes += {cKimIntQuickAttr, cKimIntPersistentAttr};",
+			"        def.setting.?PropInputSetting.?attributes.remove(cKimIntLockableAttr);",
+			"    }",
+			"}"
+		],
+		"description": "Appends and removes attributes to dimensions"
+	},
+
+	"Add: RS Entry": {
+		"prefix": "derick-rs-entry",
+		"body": [
+		  "$${1} {",
+		  "    english \"${2}\";",
+		  "}",
+		  "${3}",
+		],
+		"description": "Creates an RS entry"
+	  },
+	"Inspect Class Hierarchy": {
+		"prefix": "derick-inspect-class-hierarchy",
+		"body": [
+			"cm.runtime.console.showClassViewerDummy($1);"
+		],
+	}
+}

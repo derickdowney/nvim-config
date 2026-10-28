@@ -1,23 +1,61 @@
-vim.pack.add({
-    'https://github.com/saghen/blink.lib',
-    'https://github.com/rafamadriz/friendly-snippets',
-    'https://github.com/saghen/blink.cmp',
-})
-
-local cmp = require('blink.cmp')
-
-cmp.build()
--- cmp.build():pwait()
-
-cmp.setup({
-    completion = {
-        documentation = {
-            auto_show = true,
-        },
-        list = {
-            selection = {
-                preselect = false,
-            },
-        },
-    },
-})
+-- vim.pack.add({
+--     'https://github.com/saghen/blink.lib',
+--     'https://github.com/rafamadriz/friendly-snippets',
+--     'https://github.com/saghen/blink.cmp',
+-- })
+--
+-- local cmp = require('blink.cmp')
+--
+-- cmp.build()
+-- -- cmp.build():pwait()
+--
+-- cmp.setup({
+--     cmdline = {
+--         enabled = true,
+--         completion = {
+--             menu = {
+--                 auto_show = true, -- Set to true to pop up automatically
+--             },
+--         },
+--     },
+--     completion = {
+--         documentation = {
+--             auto_show = true,
+--         },
+--         list = {
+--             selection = {
+--                 preselect = false,
+--             },
+--         },
+--     },
+--     keymap = {
+--         preset = 'default',
+--
+--         -- Ctrl+Space: show snippets only
+--         ['<C-Space>'] = {
+--             function(completion)
+--                 return completion.show({
+--                     providers = { 'snippets' },
+--                 })
+--             end,
+--         },
+--
+--         -- Ctrl+Alt+Space: show all completion sources
+--         ['<C-A-Space>'] = { 'show' },
+--     },
+--
+--     sources = {
+--         default = { 'lsp', 'path', 'snippets', 'buffer' },
+--
+--         providers = {
+--             snippets = {
+--                 opts = {
+--                     search_paths = {
+--                         vim.fn.stdpath('config') .. '/snippets',
+--                         -- Add other snippet directories here if needed.
+--                     },
+--                 },
+--             },
+--         },
+--     },
+-- })

@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "LuaSnip": {
+      "rev": "0abc8f390b278c3b4aabc4c004ac8a088b65cf24",
+      "src": "https://github.com/L3MON4D3/LuaSnip"
+    },
     "blink.cmp": {
       "rev": "1e4cb39b9200950dca1cbc4d630c60c16eb8e7e4",
       "src": "https://github.com/saghen/blink.cmp"
