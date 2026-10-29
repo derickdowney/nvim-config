@@ -22,3 +22,9 @@ vim.keymap.set("n", "[c", function()
 end, {
     desc = "Jump to previous hunk"
 })
+
+vim.keymap.set("n", "<C-M-I>", function()
+    signs.blame_line()
+end, {
+    desc = "Display blame_line"
+})

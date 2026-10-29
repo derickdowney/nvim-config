@@ -16,6 +16,11 @@ cmp.setup({
             menu = {
                 auto_show = true, -- Set to true to pop up automatically
             },
+            list = {
+                selection = {
+                    preselect = false,
+                },
+            },
         },
     },
     completion = {

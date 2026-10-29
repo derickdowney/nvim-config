@@ -33,7 +33,8 @@ end, {
     desc = "Fuzzy search VS Code style"
 })
 
-vim.keymap.set("n", "<leader>fff", function()
+vim.keymap.set("n", "<leader>f0", function()
+    -- vim.keymap.set("n", "<leader>fff", function()
     fzf.files({
         cwd = vim.fn.expand("%:p:h")
         -- cwd = "C:\\CetDev\\dev\\extensions\\custom\\"
@@ -54,6 +55,14 @@ end, {
 vim.keymap.set("n", "<leader>ffb", function()
     fzf.files({
         cwd = vim.fn.expand("../../../base")
+    })
+end, {
+    desc = "Fuzzy search files in Configura's base directory"
+})
+
+vim.keymap.set("n", "<leader>fft", function()
+    fzf.files({
+        cwd = vim.fn.expand("../../../personal/profile/derick_downey/")
     })
 end, {
     desc = "Fuzzy search files in Configura's base directory"
