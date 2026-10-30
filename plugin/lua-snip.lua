@@ -128,11 +128,9 @@ vim.keymap.set("n", "<leader>fs", "<cmd>SnippetPicker<cr>", {
 
 
 
-
-vim.keymap.set("n", "<C-M-S>", function()
-    local prefix = "derick-comment"
-
-    for _, snip in ipairs(ls.get_snippets("cm")) do
+-- Insert CM comment snippet.
+local function insert_cm_snippet(prefix)
+    for _, snip in ipairs(ls.get_snippets("cm") or {}) do
         if snip.trigger == prefix or snip.trig == prefix then
             ls.snip_expand(snip)
             return
@@ -140,48 +138,50 @@ vim.keymap.set("n", "<C-M-S>", function()
     end
 
     vim.notify("Snippet not found: " .. prefix, vim.log.levels.WARN)
+end
+
+vim.keymap.set("n", "<C-M-S>", function()
+    insert_cm_snippet("derick-comment")
 end, { desc = "Insert CM comment snippet" })
 
 vim.keymap.set("n", "<C-M-A>", function()
-    local prefix = "derick-area-comment"
-
-    for _, snip in ipairs(ls.get_snippets("cm")) do
-        if snip.trigger == prefix or snip.trig == prefix then
-            ls.snip_expand(snip)
-            return
-        end
-    end
-
-    vim.notify("Snippet not found: " .. prefix, vim.log.levels.WARN)
+    insert_cm_snippet("derick-area-comment")
 end, { desc = "Insert CM area comment snippet" })
-
 
 vim.keymap.set("i", "<C-M-S>", function()
     vim.schedule(function()
-        local prefix = "derick-comment"
-
-        for _, snip in ipairs(ls.get_snippets("cm")) do
-            if snip.trigger == prefix or snip.trig == prefix then
-                ls.snip_expand(snip)
-                return
-            end
-        end
-
-        vim.notify("Snippet not found: " .. prefix, vim.log.levels.WARN)
+        insert_cm_snippet("derick-comment")
     end)
 end, { desc = "Insert CM comment snippet" })
 
 vim.keymap.set("i", "<C-M-A>", function()
     vim.schedule(function()
-        local prefix = "derick-area-comment"
-
-        for _, snip in ipairs(ls.get_snippets("cm")) do
-            if snip.trigger == prefix or snip.trig == prefix then
-                ls.snip_expand(snip)
-                return
-            end
-        end
-
-        vim.notify("Snippet not found: " .. prefix, vim.log.levels.WARN)
+        insert_cm_snippet("derick-area-comment")
     end)
 end, { desc = "Insert CM area comment snippet" })
+
+-- Make Tab jump to the next tabstop.
+vim.keymap.set({ "i", "s" }, "<Tab>", function()
+    if ls.jumpable(1) then
+        ls.jump(1)
+    else
+        vim.api.nvim_feedkeys(
+            vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
+            "n",
+            false
+        )
+    end
+end, { silent = true })
+
+vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+    if ls.jumpable(-1) then
+        ls.jump(-1)
+    end
+end, { silent = true })
+
+-- Insert CM print line hit snippet.
+vim.keymap.set({ "n", "i" }, "<C-M-P>", function()
+    vim.schedule(function()
+        insert_cm_snippet("derick-print-line-hit")
+    end)
+end, { desc = "Insert CM print line hit" })
