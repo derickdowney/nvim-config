@@ -78,6 +78,21 @@ vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<cr>", {
     desc = "Split window vertically"
 })
 
+-- Window resize shortcuts
+vim.keymap.set("n", "<M-,>", "<cmd>vert res -2<cr>", {
+    desc = "Make window narrower"
+})
+vim.keymap.set("n", "<M-.>", "<cmd>vert res +2<cr>", {
+    desc = "Make window wider"
+})
+vim.keymap.set("n", "<M-->", "<cmd>res -1<cr>", {
+    desc = "Make window shorter"
+})
+vim.keymap.set("n", "<M-=>", "<cmd>res +1<cr>", {
+    desc = "Make window taller"
+})
+
+
 
 -- Delete current buffer and switch to previous buffer
 -- Or technically, switch to previous, then delete the last active buffer
