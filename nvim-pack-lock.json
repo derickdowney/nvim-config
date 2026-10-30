@@ -60,6 +60,10 @@
       "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
       "src": "https://github.com/rcarriga/nvim-notify"
     },
+    "nvim-scrollbar": {
+      "rev": "00fe857e7cd97ee5e556de643ee920b003a96b03",
+      "src": "https://github.com/petertriho/nvim-scrollbar"
+    },
     "nvim-treesitter": {
       "rev": "1a4f47b03dfe92d28de7d5654c67327ef008c9e6",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"

@@ -2144,17 +2144,17 @@
 	"description": "Add Override: Part Prefix & Body"
 	},
 
-	"Add: Print Line Hit": {
-		"prefix": "derick-print-line-hit",
-	"body": [
-        "pln(spnn(\"\\n\" # ${TM_LINE_NUMBER} # \" - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").ehb${1:pink} # \" \");pln(cm.basic.popFace());",
-		""
-        // "pln(spnn(${TM_LINE_NUMBER} # \"PRINT LINE HIT - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").eAngry);"
-		//   "pln(spnn(#:function.name, \"(..) - Line $TM_LINE_NUMBER - ${TM_FILENAME} - \", #:package, \" --- PRINT LINE HIT!!!\").eAngry);",
-		//   "pln(spnn(\"PRINT LINE HIT!!! --- \", #:package, \" - ${TM_FILENAME} - \", #:function.name, \"(..) - line $TM_LINE_NUMBER\").eAngry);",
-		],
-		"description": "Print line for testing whether a line is hit"
-	},
+	// "Add: Print Line Hit": {
+	// 	"prefix": "derick-print-line-hit",
+	// "body": [
+	//        "aaabbbpln(spnn(\"\\n\" # ${TM_LINE_NUMBER} # \" - \", #:function.name, \"(..) - ${TM_FILEPATH/./X/g}:${TM_LINE_NUMBER}\").ehb${1:pink} # \" \");pln(cm.basic.popFace());",
+	// 	""
+	//        // "pln(spnn(${TM_LINE_NUMBER} # \"PRINT LINE HIT - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").eAngry);"
+	// 	//   "pln(spnn(#:function.name, \"(..) - Line $TM_LINE_NUMBER - ${TM_FILENAME} - \", #:package, \" --- PRINT LINE HIT!!!\").eAngry);",
+	// 	//   "pln(spnn(\"PRINT LINE HIT!!! --- \", #:package, \" - ${TM_FILENAME} - \", #:function.name, \"(..) - line $TM_LINE_NUMBER\").eAngry);",
+	// 	],
+	// 	"description": "Print line for testing whether a line is hit"
+	// },
 	
 	"Add: Dev Print Line Hit": {
 		"prefix": "derick-dev-print-line-hit",
@@ -2718,17 +2718,17 @@
 	"description": "Add Override: Part Prefix & Body"
 	},
 
-	"Add: Print Line Hit": {
-		"prefix": "derick-print-line-hit",
-	"body": [
-        "pln(spnn(\"\\n\" # ${TM_LINE_NUMBER} # \" - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").ehb${1:pink} # \" \");pln(cm.basic.popFace());",
-		""
-        // "pln(spnn(${TM_LINE_NUMBER} # \"PRINT LINE HIT - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").eAngry);"
-		//   "pln(spnn(#:function.name, \"(..) - Line $TM_LINE_NUMBER - ${TM_FILENAME} - \", #:package, \" --- PRINT LINE HIT!!!\").eAngry);",
-		//   "pln(spnn(\"PRINT LINE HIT!!! --- \", #:package, \" - ${TM_FILENAME} - \", #:function.name, \"(..) - line $TM_LINE_NUMBER\").eAngry);",
-		],
-		"description": "Print line for testing whether a line is hit"
-	},
+	// "Add: Print Line Hit": {
+	// 	"prefix": "derick-print-line-hit",
+	// "body": [
+	//        "pln(spnn(\"\\n\" # ${TM_LINE_NUMBER} # \" - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").ehb${1:pink} # \" \");pln(cm.basic.popFace());",
+	// 	""
+	//        // "pln(spnn(${TM_LINE_NUMBER} # \"PRINT LINE HIT - \", #:function.name, \"(..) - ${TM_FILEPATH/[\\\\\\\\]/\\\\\\\\/g}:${TM_LINE_NUMBER}\").eAngry);"
+	// 	//   "pln(spnn(#:function.name, \"(..) - Line $TM_LINE_NUMBER - ${TM_FILENAME} - \", #:package, \" --- PRINT LINE HIT!!!\").eAngry);",
+	// 	//   "pln(spnn(\"PRINT LINE HIT!!! --- \", #:package, \" - ${TM_FILENAME} - \", #:function.name, \"(..) - line $TM_LINE_NUMBER\").eAngry);",
+	// 	],
+	// 	"description": "Print line for testing whether a line is hit"
+	// },
 	
 	"Add: Dev Print Line Hit": {
 		"prefix": "derick-dev-print-line-hit",

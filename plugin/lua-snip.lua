@@ -180,6 +180,35 @@ vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
 end, { silent = true })
 
 -- Insert CM print line hit snippet.
+local s = ls.snippet
+local i = ls.insert_node
+local f = ls.function_node
+
+ls.add_snippets("cm", {
+    s("derick-print-line-hit", {
+        f(function()
+            local line = vim.fn.line(".")
+            local path = vim.fn.expand("%:p")
+
+            -- Double all backslashes.
+            path = path:gsub("\\", "\\\\")
+
+            return string.format(
+                'pln(spnn("\\n" # %d # " - ", #:function.name, "(..) - %s:%d").ehb',
+                line,
+                path,
+                line
+            )
+        end),
+
+        i(1, "pink"),
+
+        f(function()
+            return ' # " ");pln(cm.basic.popFace());'
+        end),
+    }),
+})
+
 vim.keymap.set({ "n", "i" }, "<C-M-P>", function()
     vim.schedule(function()
         insert_cm_snippet("derick-print-line-hit")

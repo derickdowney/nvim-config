@@ -65,7 +65,7 @@ vim.keymap.set("n", "<leader>fft", function()
         cwd = vim.fn.expand("../../../personal/profile/derick_downey/")
     })
 end, {
-    desc = "Fuzzy search files in Configura's base directory"
+    desc = "Fuzzy search files in personal profile directory"
 })
 
 vim.keymap.set("n", "<leader>ffc", function()
