@@ -46,7 +46,14 @@ end, {
 vim.keymap.set("n", "<leader>ff.", function()
     fzf.files({
         cwd = vim.fn.expand(".")
-        -- cwd = "C:\\CetDev\\dev\\extensions\\custom\\"
+    })
+end, {
+    desc = "Fuzzy search files in current working directory"
+})
+
+vim.keymap.set("n", "<leader>f.", function()
+    fzf.files({
+        cwd = vim.fn.expand(".")
     })
 end, {
     desc = "Fuzzy search files in current working directory"
