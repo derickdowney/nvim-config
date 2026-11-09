@@ -92,7 +92,16 @@ require('nvim-treesitter').install {
     'xml',
     'toml',
     'markdown',
+    'ini',
 }
+
+-- Make .importlinter files use toml syntax highlighting
+vim.treesitter.language.register('ini', { 'importlinter' })
+vim.filetype.add({
+    extension = {
+        importlinter = 'importlinter',
+    },
+})
 
 vim.cmd('syntax off') -- Make it obvious if treesitter is missing
 
