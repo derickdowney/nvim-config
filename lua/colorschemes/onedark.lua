@@ -53,13 +53,15 @@ local function toggle_theme()
 
     if is_dark then
         require('onedark').setup({ style = 'darker' })
+        require('onedark').load()
         print("Switched to Dark mode")
     else
         require('onedark').setup({ style = 'light' })
+        require('onedark').load()
+        vim.api.nvim_set_hl(0, "Normal", { bg = "#FFFFFF", fg = "#666666" })
         print("Switched to Light mode")
     end
 
-    require('onedark').load()
     update_lsp_highlight(is_dark)
 end
 

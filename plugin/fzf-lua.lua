@@ -23,6 +23,7 @@ fzf.setup({
     files = {
         formatter = 'path.filename_first',
     },
+    fzf_colors = true
 })
 
 vim.keymap.set("n", "<leader><space><space>", function()
