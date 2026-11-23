@@ -140,21 +140,21 @@ local function insert_cm_snippet(prefix)
     vim.notify("Snippet not found: " .. prefix, vim.log.levels.WARN)
 end
 
-vim.keymap.set("n", "<C-M-S>", function()
+vim.keymap.set("n", "<C-M-S-S>", function()
     insert_cm_snippet("derick-comment")
 end, { desc = "Insert CM comment snippet" })
 
-vim.keymap.set("n", "<C-M-A>", function()
+vim.keymap.set("n", "<C-M-S-A>", function()
     insert_cm_snippet("derick-area-comment")
 end, { desc = "Insert CM area comment snippet" })
 
-vim.keymap.set("i", "<C-M-S>", function()
+vim.keymap.set("i", "<C-M-S-S>", function()
     vim.schedule(function()
         insert_cm_snippet("derick-comment")
     end)
 end, { desc = "Insert CM comment snippet" })
 
-vim.keymap.set("i", "<C-M-A>", function()
+vim.keymap.set("i", "<C-M-S-A>", function()
     vim.schedule(function()
         insert_cm_snippet("derick-area-comment")
     end)
@@ -209,7 +209,7 @@ ls.add_snippets("cm", {
     }),
 })
 
-vim.keymap.set({ "n", "i" }, "<C-M-P>", function()
+vim.keymap.set({ "n", "i" }, "<C-M-S-P>", function()
     vim.schedule(function()
         insert_cm_snippet("derick-print-line-hit")
     end)
